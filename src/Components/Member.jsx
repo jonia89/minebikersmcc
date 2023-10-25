@@ -1,11 +1,11 @@
 export default function Member(props) {
   return (
     <div className="members">
-      <iframe
-        title="member"
+      <img
         src={props.members.photo}
-        height={props.members.height}
-        width={props.members.width}
+        alt={props.members.name}
+        width={300}
+        height={200}
       />
       <div>
         <h2>{props.members.name}</h2>

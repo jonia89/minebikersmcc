@@ -8,8 +8,6 @@ export default function Jäsenet() {
       name: "Simo",
       intro:
         "Hylätyillä leirintävarusteilla täytetty rikkinäinen makuupussi joka jätettiin aikoinaan jögevatreffin leirintäalueelle. Simoa muistellaan joka vuosi ja otetaan huikat.",
-      width: 147.5,
-      height: 200.5,
     },
   ];
 

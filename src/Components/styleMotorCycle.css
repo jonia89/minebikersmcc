@@ -69,7 +69,7 @@
 .bike-body .cover {
   width: 75px;
   height: 30px;
-  background: #f4492c;
+  background: #2a12b6;
   position: absolute;
   top: 55px;
   left: 105px;
@@ -100,7 +100,7 @@
   height: 45px;
   position: absolute;
   left: 90px;
-  top: 90px;
+  top: 88px;
 }
 .part-1 {
   width: 75px;
@@ -110,7 +110,7 @@
 .part-1-top {
   width: 40px;
   height: 20px;
-  background: linear-gradient(135deg, transparent 10px, #f5492c 0);
+  background: linear-gradient(135deg, transparent 10px, #2a12b6 0);
   border-radius: 0px 5px 5px 5px;
   box-shadow: inset -2px -2px 0px 1px rgba(0, 0, 0, 0.2);
 }
