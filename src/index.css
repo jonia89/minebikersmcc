@@ -1,0 +1,100 @@
+body {
+  display: flex;
+  text-align: center;
+  background-image: url(mcclogo.jpg);
+  background-repeat: no-repeat;
+  background-color: black;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100% 100%;
+  margin-left: 0%;
+  margin-top: 100px;
+  
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h2 {
+  color: azure;
+}
+h3 {
+  color: bisque;
+}
+
+p {
+  color: antiquewhite;
+  font-size: small;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.gallery {
+  flex-direction: column;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 1%;
+  font-size: x-small;
+  gap: 1%;
+  background: transparent;
+  padding: 1%;
+  border-radius: 0%;
+  border: none;
+}
+.gallery:hover {
+  transition: transform 0.2s;
+  box-shadow: 0 2px 30px rgba(17, 17, 17, 0.4);
+  background-color: black;
+}
+
+.facebook {
+  display: "flex";
+  border: "none";
+  background-color: azure;
+}
+
+.members {
+  display: flex;
+  flex-direction: row;
+  margin: 7px;
+}
+.members:hover {
+  background-color: black;
+  box-shadow: 0 1px 8px rgba(175, 109, 109, 0.25);
+  transition: transform 0.2s;
+}
+
+.navbutton {
+  margin: 30%;
+  margin-left: auto;
+  background-color: black;
+  font-size: large;
+  color: cornsilk;
+  justify-content: center;
+  align-items: center;
+}
+.navbutton:hover {
+  transition: transform 0.2s;
+  box-shadow: 0 2px 30px rgb(255, 255, 255);
+}
+.navbutton:active {
+  background-color: gray;
+}
+.wordexplanation {
+  padding: 1%;
+  background-color: transparent;
+  margin: 1%;
+  max-width: 95%;
+  border-radius: 10px;
+}
+.wordexplanation:hover {
+  background-color: black;
+  box-shadow: 0 1px 8px rgba(175, 109, 109, 0.25);
+  transition: transform 0.2s;
+}
