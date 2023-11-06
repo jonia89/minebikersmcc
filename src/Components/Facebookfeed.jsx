@@ -2,10 +2,10 @@ export default function Facebookfeed(props) {
   return (
     <div className="facebook">
       <iframe
-        src={props.facebookPosts}
+        src={props.facebookPosts.post}
         title="Facebook feed"
-        width="250"
-        height="550"
+        width="300"
+        height={props.facebookPosts.height}
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
       ></iframe>
     </div>
