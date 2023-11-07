@@ -180,45 +180,9 @@ export default function Sanastoa() {
   return (
     <div>
       <h2 className="wordexplanation">Sanojen selitystä:</h2>
-      <Wordlist words={words[0]} />
-      <Wordlist words={words[1]} />
-      <Wordlist words={words[2]} />
-      <Wordlist words={words[3]} />
-      <Wordlist words={words[4]} />
-      <Wordlist words={words[5]} />
-      <Wordlist words={words[6]} />
-      <Wordlist words={words[7]} />
-      <Wordlist words={words[8]} />
-      <Wordlist words={words[9]} />
-      <Wordlist words={words[10]} />
-      <Wordlist words={words[11]} />
-      <Wordlist words={words[12]} />
-      <Wordlist words={words[13]} />
-      <Wordlist words={words[14]} />
-      <Wordlist words={words[15]} />
-      <Wordlist words={words[16]} />
-      <Wordlist words={words[17]} />
-      <Wordlist words={words[18]} />
-      <Wordlist words={words[19]} />
-      <Wordlist words={words[20]} />
-      <Wordlist words={words[21]} />
-      <Wordlist words={words[22]} />
-      <Wordlist words={words[23]} />
-      <Wordlist words={words[24]} />
-      <Wordlist words={words[25]} />
-      <Wordlist words={words[26]} />
-      <Wordlist words={words[27]} />
-      <Wordlist words={words[28]} />
-      <Wordlist words={words[29]} />
-      <Wordlist words={words[30]} />
-      <Wordlist words={words[31]} />
-      <Wordlist words={words[32]} />
-      <Wordlist words={words[33]} />
-      <Wordlist words={words[34]} />
-      <Wordlist words={words[35]} />
-      <Wordlist words={words[36]} />
-      <Wordlist words={words[37]} />
-      <Wordlist words={words[38]} />
+      {words.map((word) => (
+        <Wordlist words={word} />
+      ))}
     </div>
   );
 }

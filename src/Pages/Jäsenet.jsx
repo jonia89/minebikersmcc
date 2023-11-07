@@ -15,8 +15,9 @@ export default function Jäsenet() {
     <div>
       <h2 className="wordexplanation">Kerhomme jäsenet:</h2>
       <div>
-        <Member members={members[0]} />
-        <Member members={members[0]} />
+        {members.map((member) => (
+          <Member members={member} />
+        ))}
       </div>
     </div>
   );

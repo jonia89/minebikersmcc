@@ -156,38 +156,11 @@ const photos = [
 export default function Galleria() {
   return (
     <div>
-      <ul>
-        <Gallery photos={photos[0]} />
-        <Gallery photos={photos[1]} />
-        <Gallery photos={photos[2]} />
-        <Gallery photos={photos[3]} />
-        <Gallery photos={photos[4]} />
-        <Gallery photos={photos[5]} />
-        <Gallery photos={photos[6]} />
-        <Gallery photos={photos[7]} />
-        <Gallery photos={photos[8]} />
-        <Gallery photos={photos[9]} />
-        <Gallery photos={photos[10]} />
-        <Gallery photos={photos[11]} />
-        <Gallery photos={photos[12]} />
-        <Gallery photos={photos[13]} />
-        <Gallery photos={photos[14]} />
-        <Gallery photos={photos[15]} />
-        <Gallery photos={photos[16]} />
-        <Gallery photos={photos[17]} />
-        <Gallery photos={photos[18]} />
-        <Gallery photos={photos[19]} />
-        <Gallery photos={photos[20]} />
-        <Gallery photos={photos[21]} />
-        <Gallery photos={photos[22]} />
-        <Gallery photos={photos[23]} />
-        <Gallery photos={photos[24]} />
-        <Gallery photos={photos[25]} />
-        <Gallery photos={photos[26]} />
-        <Gallery photos={photos[27]} />
-        <Gallery photos={photos[28]} />
-        <Gallery photos={photos[29]} />
-      </ul>
+      {photos.map((photo) => (
+        <ul>
+          <Gallery photos={photo} />
+        </ul>
+      ))}
     </div>
   );
 }

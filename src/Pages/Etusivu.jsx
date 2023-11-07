@@ -1,7 +1,7 @@
 import Facebookfeed from "../Components/Facebookfeed";
 import { InstagramEmbed } from "react-social-media-embed";
 
-export default function Etusivu() {
+export default function Etusivu(props) {
   const facebookPosts = [
     {
       post: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0hHEZqRehvWUoQyi9GBK1rhUzyxKE4bWaxrFknzBik9RJ8SkyBtp51hg1UkEZcayml%26id%3D100092389456753&show_text=true&width=500",
@@ -24,10 +24,9 @@ export default function Etusivu() {
   return (
     <div className="frontpage">
       <div>
-        <Facebookfeed facebookPosts={facebookPosts[0]} />
-        <Facebookfeed facebookPosts={facebookPosts[1]} />
-        <Facebookfeed facebookPosts={facebookPosts[2]} />
-        <Facebookfeed facebookPosts={facebookPosts[3]} />
+        {facebookPosts.map((post) => (
+          <Facebookfeed facebookPosts={post} />
+        ))}
       </div>
       <div>
         <iframe
@@ -36,13 +35,15 @@ export default function Etusivu() {
           src="https://open.spotify.com/embed/playlist/2CsHDNRmVuWJVT7BhwunX3?utm_source=generator"
           width="300"
           height="460"
-          
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         ></iframe>
       </div>
       <div>
-      <InstagramEmbed url="https://www.instagram.com/p/CUbHfhpswxt/" width={328} />
+        <InstagramEmbed
+          url="https://www.instagram.com/p/CUbHfhpswxt/"
+          width={328}
+        />
       </div>
     </div>
   );
