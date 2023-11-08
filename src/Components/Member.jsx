@@ -1,3 +1,5 @@
+import "./Members.css"
+
 export default function Member(props) {
   const clickHandler = (event) => {
     event.target.requestFullscreen();

@@ -10,6 +10,7 @@ import text from "../minebikerstext.png";
 import mcc from "../mcc.jpg";
 import Navbutton from "./Navbutton";
 import MotorCycle from "./MotorCycle";
+import "./Navbar.css"
 
 export default function Navigation() {
   const sites = [
@@ -26,12 +27,9 @@ export default function Navigation() {
       <BrowserRouter>
         <div className="navbar">
           <img src={text} alt="Minebikers" />
-          <Navbutton sites={sites[0]} />
-          <Navbutton sites={sites[1]} />
-          <Navbutton sites={sites[2]} />
-          <Navbutton sites={sites[3]} />
-          <Navbutton sites={sites[4]} />
-          <Navbutton sites={sites[5]} />
+          {sites.map((site) => (
+            <Navbutton sites={site} />
+          ))}
           <img src={mcc} alt="mcc" />
         </div>
         <div className="mcstyle">

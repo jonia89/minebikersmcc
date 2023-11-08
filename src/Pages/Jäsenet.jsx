@@ -1,5 +1,6 @@
 import Member from "../Components/Member";
 import photo from "../Images/members/logosmall.jpg";
+import "./Pagestyle.css"
 
 export default function Jäsenet() {
   const members = [
@@ -13,7 +14,7 @@ export default function Jäsenet() {
 
   return (
     <div>
-      <h2 className="wordexplanation">Kerhomme jäsenet:</h2>
+      <h2 className="styleForRestOfPages">Kerhomme jäsenet:</h2>
       <div>
         {members.map((member) => (
           <Member members={member} />

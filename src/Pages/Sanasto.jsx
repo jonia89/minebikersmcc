@@ -1,4 +1,5 @@
 import Wordlist from "../Components/Wordlist";
+import "./Pagestyle.css"
 
 export default function Sanastoa() {
   const words = [
@@ -179,7 +180,7 @@ export default function Sanastoa() {
 
   return (
     <div>
-      <h2 className="wordexplanation">Sanojen selitystä:</h2>
+      <h2 className="styleForRestOfPages">Sanojen selitystä:</h2>
       {words.map((word) => (
         <Wordlist words={word} />
       ))}

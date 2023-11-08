@@ -1,3 +1,5 @@
+import "./Gallery.css"
+
 export default function Gallery(props) {
   const clickHandler = (event) => {
     event.target.requestFullscreen();

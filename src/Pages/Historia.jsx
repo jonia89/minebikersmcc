@@ -1,6 +1,8 @@
+import "./Pagestyle.css"
+
 export default function Historia() {
   return (
-    <div className="wordexplanation">
+    <div className="styleForRestOfPages">
       <h2>Historia:</h2>
       <p>
         Joskus alkukesästä vuonna 2000 sekalainen joukko kokoontui Kaarelan

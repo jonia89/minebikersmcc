@@ -1,14 +1,11 @@
 body {
-  display: flex;
-  text-align: center;
   background-image: url(mcclogo.jpg);
   background-repeat: no-repeat;
   background-color: black;
   background-attachment: fixed;
   background-position: center;
   background-size: 100% 100%;
-  margin-left: 0%;
-  margin-top: 100px;
+  margin-top: 30%;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -31,91 +28,4 @@ p {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-.facebook {
-  display: "flex";
-  border: "none";
-  background-color: azure;
-}
-.frontpage {
-  display: flex;
-  flex-direction: row;
-}
-
-.gallery {
-  flex-direction: column;
-  max-width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-inline: 1%;
-  font-size: x-small;
-  gap: 1%;
-  background: transparent;
-  padding: 1%;
-  border-radius: 0%;
-  border: none;
-  margin-top: 20%;
-}
-.gallery:hover {
-  transition: transform 0.2s;
-  box-shadow: 0 2px 30px rgba(17, 17, 17, 0.4);
-  background-color: black;
-}
-.mcstyle {
-  position: fixed;
-  display: flex;
-  background: transparent;
-}
-
-.members {
-  display: flex;
-  flex-direction: row;
-  margin: 7px;
-}
-.members:hover {
-  background-color: black;
-  box-shadow: 0 1px 8px rgba(175, 109, 109, 0.25);
-  transition: transform 0.2s;
-}
-.navbar {
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  background: transparent;
-  align-items: center;
-  justify-content: center;
-  margin: 1%;
-}
-.navbutton {
-  margin: 30%;
-  margin-left: auto;
-  background-color: black;
-  font-size: large;
-  color: cornsilk;
-  justify-content: center;
-  align-items: center;
-}
-.navbutton:hover {
-  transition: transform 0.2s;
-  box-shadow: 0 2px 30px rgb(255, 255, 255);
-}
-.navbutton:active {
-  background-color: gold;
-}
-.wordexplanation {
-  padding: 1%;
-  background-color: transparent;
-
-  margin-top: 20%;
-  max-width: 100%;
-  border-radius: 10px;
-}
-.wordexplanation:hover {
-  background-color: black;
-  box-shadow: 0 1px 8px rgba(175, 109, 109, 0.25);
-  transition: transform 0.2s;
 }

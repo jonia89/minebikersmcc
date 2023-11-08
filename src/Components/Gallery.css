@@ -1,0 +1,15 @@
+.gallery {
+    flex-direction: column;
+    max-width: 100%;
+    display: flex;
+    font-size: x-small;
+    background: transparent;
+    border: none;
+    align-items: center;
+    text-align: center;
+  }
+  .gallery:hover {
+    transition: transform 0.2s;
+    box-shadow: 0 2px 30px rgba(17, 17, 17, 0.4);
+    background-color: black;
+  }

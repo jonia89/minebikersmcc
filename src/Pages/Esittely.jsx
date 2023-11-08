@@ -1,6 +1,8 @@
+import "./Pagestyle.css"
+
 export default function Esittely() {
   return (
-    <div className="wordexplanation">
+    <div className="styleForRestOfPages">
       <h2>Minebikers MCC esittäytyy:</h2>
       <p>
         Minebikers on Vantaan Kaivokselassa vuonna 2000 perustettu ja edelleen

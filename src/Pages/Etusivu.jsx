@@ -1,5 +1,6 @@
 import Facebookfeed from "../Components/Facebookfeed";
 import { InstagramEmbed } from "react-social-media-embed";
+import "./Frontpage.css"
 
 export default function Etusivu(props) {
   const facebookPosts = [
