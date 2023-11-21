@@ -1,16 +1,13 @@
-.gallery {
+.word {
   display: flex;
   flex-direction: column;
 
   margin-left: 15%;
   margin-right: 15%;
-  margin-top: 30%;
-  
-
-  text-align: center;
-  align-items: center;
+  margin-top: 10%;
+  margin-bottom: -10%;
 }
-.gallery:hover {
+.word:hover {
   background-color: black;
   box-shadow: 0 1px 8px rgba(175, 109, 109, 0.25);
   transition: transform 0.2s;

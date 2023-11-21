@@ -1,0 +1,6 @@
+.words {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,11 +1,10 @@
 body {
-  background-image: url(mcclogo.jpg);
+  background-image: url(/src/mcclogo.jpg);
   background-repeat: no-repeat;
-  background-color: black;
   background-attachment: fixed;
   background-position: center;
-  background-size: 100% 100%;
-  margin-top: 30%;
+  background-color: black;
+  background-size: 60% 100%;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -16,13 +15,13 @@ body {
 h2 {
   color: azure;
 }
+
 h3 {
   color: bisque;
 }
 
 p {
   color: antiquewhite;
-  font-size: small;
 }
 
 code {

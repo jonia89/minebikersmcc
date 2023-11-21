@@ -9,8 +9,7 @@ import Jäsenet from "../Pages/Jäsenet";
 import text from "../minebikerstext.png";
 import mcc from "../mcc.jpg";
 import Navbutton from "./Navbutton";
-import MotorCycle from "./MotorCycle";
-import "./Navbar.css"
+import "./Navbar.css";
 
 export default function Navigation() {
   const sites = [
@@ -31,9 +30,6 @@ export default function Navigation() {
             <Navbutton sites={site} />
           ))}
           <img src={mcc} alt="mcc" />
-        </div>
-        <div className="mcstyle">
-          <MotorCycle />
         </div>
         <Routes>
           <Route exact path="/" element={<Etusivu />} />

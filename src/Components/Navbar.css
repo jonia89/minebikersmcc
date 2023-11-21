@@ -21,8 +21,3 @@
 .navbutton:active {
   background-color: gold;
 }
-.mcstyle {
-  position: fixed;
-  display: flex;
-  background: transparent;
-}

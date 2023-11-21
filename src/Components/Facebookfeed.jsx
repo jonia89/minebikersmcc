@@ -1,5 +1,3 @@
-import "./Facebook.css"
-
 export default function Facebookfeed(props) {
   return (
     <div className="facebook">

@@ -12,7 +12,7 @@
   color: #000;
   font-family: "droid sans", sans-serif;
 }
-.container:hover {
+.container:active {
   animation: linear infinite;
   animation-name: drive;
   animation-duration: 10s;

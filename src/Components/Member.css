@@ -1,12 +1,13 @@
-.members {
+.member {
   display: flex;
   flex-direction: row;
-  padding: 1%;
-  background-color: transparent;
-  max-width: 100%;
-  border-radius: 10px;
+
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 10%;
+  margin-bottom: -10%;
 }
-.members:hover {
+.member:hover {
   background-color: black;
   box-shadow: 0 1px 8px rgba(175, 109, 109, 0.25);
   transition: transform 0.2s;

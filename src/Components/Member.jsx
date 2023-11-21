@@ -1,4 +1,4 @@
-import "./Members.css"
+import "./Member.css"
 
 export default function Member(props) {
   const clickHandler = (event) => {
@@ -7,7 +7,7 @@ export default function Member(props) {
 
   return (
     <div>
-      <div className="members">
+      <div className="member">
         <img
           onClick={clickHandler}
           src={props.members.photo}

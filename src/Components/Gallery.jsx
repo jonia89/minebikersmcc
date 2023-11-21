@@ -1,4 +1,4 @@
-import "./Gallery.css"
+import "./Gallery.css";
 
 export default function Gallery(props) {
   const clickHandler = (event) => {
@@ -15,7 +15,9 @@ export default function Gallery(props) {
           width={500}
           height={300}
         />
-        <p>{props.photos.text}</p>
+        <div>
+          <p>{props.photos.text}</p>
+        </div>
       </div>
     </div>
   );

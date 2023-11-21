@@ -1,6 +1,7 @@
 import Facebookfeed from "../Components/Facebookfeed";
-import { InstagramEmbed } from "react-social-media-embed";
-import "./Frontpage.css"
+import { InstagramEmbed, FacebookEmbed } from "react-social-media-embed";
+import MotorCycle from "../Components/MotorCycle";
+import "./Frontpage.css";
 
 export default function Etusivu(props) {
   const facebookPosts = [
@@ -24,23 +25,15 @@ export default function Etusivu(props) {
 
   return (
     <div className="frontpage">
-      <div>
+      <div className="mcstyle">
+        <MotorCycle />
+      </div>
+      <div className="facebook">
         {facebookPosts.map((post) => (
           <Facebookfeed facebookPosts={post} />
         ))}
       </div>
-      <div>
-        <iframe
-          frameBorder="no border"
-          title="Manowar playlist"
-          src="https://open.spotify.com/embed/playlist/2CsHDNRmVuWJVT7BhwunX3?utm_source=generator"
-          width="300"
-          height="460"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
-      </div>
-      <div>
+      <div className="instagram">
         <InstagramEmbed
           url="https://www.instagram.com/p/CUbHfhpswxt/"
           width={328}

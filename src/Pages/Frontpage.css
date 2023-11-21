@@ -1,7 +1,22 @@
 .frontpage {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   background-color: transparent;
-  max-width: 100%;
+  justify-content: space-between;
+}
+.facebook {
+  display: flex;
+  flex-direction: column;
+  background-color: azure;
+  margin-top: 20%;
+}
+.instagram {
+  display: flex;
+  margin-top: 20%;
+}
+.mcstyle {
+  position: fixed;
+  display: flex;
+  background: transparent;
+  margin-top: 15%;
 }
