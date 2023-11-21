@@ -1,6 +1,6 @@
 import "./Intropage.css"
 
-export default function Esittely() {
+export default function Intro() {
   return (
     <div className="intro">
       <h2 className="h2">Minebikers MCC esittäytyy:</h2>

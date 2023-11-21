@@ -1,13 +1,13 @@
-import "./Gallery.css";
+import "./Images.css";
 
-export default function Gallery(props) {
+export default function Images(props) {
   const clickHandler = (event) => {
     event.target.requestFullscreen();
   };
 
   return (
     <div>
-      <div className="gallery">
+      <div className="imageshow">
         <img
           onClick={clickHandler}
           src={props.photos.photo}

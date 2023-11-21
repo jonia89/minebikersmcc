@@ -1,4 +1,4 @@
-import Gallery from "../Components/Gallery";
+import Images from "../Components/Images";
 import "./Gallerypage.css";
 
 import mb1 from "../Images/gallery/MineBikers1.jpg";
@@ -155,11 +155,11 @@ const photos = [
   },
 ];
 
-export default function Galleria() {
+export default function Gallery() {
   return (
-    <div className="galleria">
+    <div className="gallery">
       {photos.map((photo) => (
-        <Gallery photos={photo} />
+        <Images photos={photo} />
       ))}
     </div>
   );

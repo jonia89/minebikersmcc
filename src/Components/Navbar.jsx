@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Etusivu from "../Pages/Etusivu";
-import Esittely from "../Pages/Esittely";
-import Historia from "../Pages/Historia";
-import Sanastoa from "../Pages/Sanasto";
-import Galleria from "../Pages/Galleria";
-import Jäsenet from "../Pages/Jäsenet";
+import Home from "../Pages/Frontpage";
+import Intro from "../Pages/Intropage";
+import History from "../Pages/Historypage";
+import Words from "../Pages/Wordpage";
+import Gallery from "../Pages/Gallerypage";
+import Members from "../Pages/Memberspage";
 import text from "../minebikerstext.png";
 import mcc from "../mcc.jpg";
 import Navbutton from "./Navbutton";
@@ -32,12 +32,12 @@ export default function Navigation() {
           <img src={mcc} alt="mcc" />
         </div>
         <Routes>
-          <Route exact path="/" element={<Etusivu />} />
-          <Route exact path="/esittely" element={<Esittely />} />
-          <Route exact path="/historia" element={<Historia />} />
-          <Route exact path="/galleria" element={<Galleria />} />
-          <Route exact path="/jäsenet" element={<Jäsenet />} />
-          <Route exact path="/sanastoa" element={<Sanastoa />} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/esittely" element={<Intro />} />
+          <Route exact path="/historia" element={<History />} />
+          <Route exact path="/galleria" element={<Gallery />} />
+          <Route exact path="/jäsenet" element={<Members />} />
+          <Route exact path="/sanastoa" element={<Words />} />
         </Routes>
       </BrowserRouter>
     </div>

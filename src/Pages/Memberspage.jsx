@@ -1,8 +1,8 @@
 import Member from "../Components/Member";
 import photo from "../Images/members/logosmall.jpg";
-import "./Memberpage.css"
+import "./Memberspage.css"
 
-export default function Jäsenet() {
+export default function Members() {
   const members = [
     {
       photo: photo,

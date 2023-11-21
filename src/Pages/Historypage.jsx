@@ -1,6 +1,6 @@
 import "./Historypage.css"
 
-export default function Historia() {
+export default function History() {
   return (
     <div className="history">
       <p className="p">

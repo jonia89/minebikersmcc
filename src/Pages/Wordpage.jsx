@@ -1,7 +1,7 @@
 import Wordlist from "../Components/Wordlist";
 import "./Wordpage.css";
 
-export default function Sanastoa() {
+export default function Words() {
   const words = [
     {
       word: "Anar",

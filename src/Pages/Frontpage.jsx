@@ -1,9 +1,9 @@
 import Facebookfeed from "../Components/Facebookfeed";
 import { InstagramEmbed, FacebookEmbed } from "react-social-media-embed";
-import MotorCycle from "../Components/MotorCycle";
+import MotorCycle from "../Components/styleMotorCycle";
 import "./Frontpage.css";
 
-export default function Etusivu(props) {
+export default function Home(props) {
   const facebookPosts = [
     {
       post: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0hHEZqRehvWUoQyi9GBK1rhUzyxKE4bWaxrFknzBik9RJ8SkyBtp51hg1UkEZcayml%26id%3D100092389456753&show_text=true&width=500",
