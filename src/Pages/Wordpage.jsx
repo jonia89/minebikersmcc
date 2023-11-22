@@ -181,7 +181,7 @@ export default function Words() {
   return (
     <div className="words">
       {words.map((word) => (
-        <Wordlist words={word} />
+        <Wordlist key={word.word} words={word} />
       ))}
     </div>
   );

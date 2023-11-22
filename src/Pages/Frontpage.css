@@ -6,7 +6,6 @@
 }
 .facebook {
   display: flex;
-  flex-direction: column;
   background-color: azure;
   margin-top: 20%;
 }

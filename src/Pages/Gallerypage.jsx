@@ -159,7 +159,7 @@ export default function Gallery() {
   return (
     <div className="gallery">
       {photos.map((photo) => (
-        <Images photos={photo} />
+        <Images key={photo.photo} photos={photo} />
       ))}
     </div>
   );

@@ -15,9 +15,10 @@
   color: cornsilk;
 }
 .navbutton:hover {
+  background-color: gold;
+}
+.navbutton[click="1"] {
   transition: transform 0.2s;
   box-shadow: 0 2px 30px rgb(255, 255, 255);
-}
-.navbutton:active {
   background-color: gold;
 }

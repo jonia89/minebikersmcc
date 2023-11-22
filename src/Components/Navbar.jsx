@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../Pages/Frontpage";
 import Intro from "../Pages/Intropage";
@@ -27,7 +26,7 @@ export default function Navigation() {
         <div className="navbar">
           <img src={text} alt="Minebikers" />
           {sites.map((site) => (
-            <Navbutton sites={site} />
+            <Navbutton key={site.site} sites={site} />
           ))}
           <img src={mcc} alt="mcc" />
         </div>
