@@ -6,10 +6,13 @@ export default function Navbutton(props) {
   const url = props.sites.url;
   const site = props.sites.site;
 
-  let [click, setClick] = useState(0);
+  let [click, setClick] = useState();
 
   const isActive = () => {
-    setClick(1);
+    setClick(0);
+    if (click === 0) {
+      setClick(1);
+    }
 
     console.log(click);
   };
