@@ -1,7 +1,6 @@
 .frontpage {
   display: flex;
   flex-direction: row;
-  background-color: transparent;
   justify-content: space-between;
 }
 .facebook {

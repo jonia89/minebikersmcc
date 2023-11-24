@@ -10,7 +10,7 @@ import mcc from "../mcc.jpg";
 import Navbutton from "./Navbutton";
 import "./Navbar.css";
 
-export default function Navigation() {
+export default function Navbar() {
   const sites = [
     { site: "Etusivu", url: "/" },
     { site: "Esittely", url: "/esittely" },

@@ -1,5 +1,4 @@
-import Images from "../Components/Images";
-import "./Gallerypage.css";
+import Imagecarousel from "../Components/Imagecarousel";
 
 import mb1 from "../Images/gallery/MineBikers1.jpg";
 import mb2 from "../Images/gallery/MineBikers2.jpg";
@@ -32,135 +31,76 @@ import mb28 from "../Images/gallery/MineBikers28.jpg";
 import mb29 from "../Images/gallery/MineBikers29.jpg";
 import mb30 from "../Images/gallery/MineBikers30.jpg";
 
-const photos = [
-  {
-    photo: mb1,
-    text: "Odottamassa jögevatreffin paraatiin lähtöä vuonna 2010.",
-  },
-  {
-    photo: mb2,
-    text: "Kompakti teltta on kätevä!",
-  },
-  {
-    photo: mb3,
-    text: "Virolaista tienhoitoa Mustveen ja Jögevan väliltä joskus vanhaan hyvään aikaan. Kartalla tässä näkyi asfalttitie",
-  },
-  {
-    photo: mb4,
-    text: "Kiiregrilli luo tunnelmaa.",
-  },
-  {
-    photo: mb5,
-    text: "Rannarootsi odottaa grilliin pääsyä.",
-  },
-  {
-    photo: mb6,
-    text: "Tuusulanjärven rannalla grillailemassa vuonna 2020.",
-  },
-  {
-    photo: mb7,
-    text: "Jägalan vesiputous ja kuppi kuumaa saa motoristin hartaaksi.",
-  },
-  {
-    photo: mb8,
-    text: "Ajotauko porottavan auringon alla.",
-  },
-  {
-    photo: mb9,
-    text: "Pyörät parkissa, melkein kaikki sitä parasta merkkiä.",
-  },
-  {
-    photo: mb10,
-    text: "Kiluleib munaga, ihan parasta herkkua etelänaapurista.",
-  },
-  {
-    photo: mb11,
-    text: "Nykyinen pressa nuorena jäsenenä vuoden 2000 treffissä. Kyllä, prätkällä ulkoilmabaariin ajaminen oli ihan ok tuolloin.",
-  },
-  {
-    photo: mb12,
-    text: "Blackbirdin takakumi sileäksi burniksessa, paikalliset tykkäsivät kovasti ja osa tuli ihmettelemään jälkiä.",
-  },
-  {
-    photo: mb13,
-    text: "Nuori jäsen, nykyinen SGT näyttää peukkua kaatosateessa joskus 2000-luvun alkuvuosina, vaikka uimahommiksi telttailu menikin.",
-  },
-  {
-    photo: mb14,
-    text: "Vuonna 2000 oltiin, jos ei komeita niin ainakin melko nuoria.",
-  },
-  {
-    photo: mb15,
-    text: "Kaljaa, majoneesia ja tupakkia. Siinäpä ne tärkeimmät.",
-  },
-  {
-    photo: mb16,
-    text: "Jögevatreffin esiintymislava.",
-  },
-  {
-    photo: mb17,
-    text: "Lippu ja lippuvalo, kahteen Suzukiin köytettynä tottakai.",
-  },
-  {
-    photo: mb18,
-    text: "Vuoden 2022 ryhmäkuva. Tarkoitus oli hankkia mustat hupparit vaaleilla teksteillä, mutta jossain vaiheessa tieto katkesi ja päädyimme klu-klux-klanin väreihin.",
-  },
-  {
-    photo: mb19,
-    text: "Lauisen kyläkaupalla eväitä hakemassa.",
-  },
-  {
-    photo: mb20,
-    text: "Vuonna 2022 pistäydyimme paluumatkalla neuvostoaikaisissa ohjussiiloissa. Tie perille oli kamala, paikka kyllä varsin mielenkiintoinen.",
-  },
-  {
-    photo: mb21,
-    text: "Kun pyörä porsii matkalla niin veljeskansa auttaa.",
-  },
-  {
-    photo: mb22,
-    text: "Lauttaan pääsyä odottamassa, sade kuuluu välillä asiaan.",
-  },
-  {
-    photo: mb23,
-    text: "Yöllistä tunnelmaa telttamajoituksessa.",
-  },
-  {
-    photo: mb24,
-    text: "Saappaita ja sukkia kuivattelemassa ennen laivaan ajoa Tallinnassa.",
-  },
-  {
-    photo: mb25,
-    text: "Kun ilmatieteenlaitos lupaa sadetta seitsemän prosentin todennäköisyydella menee koko viikonloppu yleensä uimahommiksi.",
-  },
-  {
-    photo: mb26,
-    text: "Jögevatreffillä alkaa olemaan perinteitä, vanhimmilla kerholaisillakin alkaa olemaan kaksikymmentä reissua plakkarissa.",
-  },
-  {
-    photo: mb27,
-    text: "Sataa sataa lorisee, yksi ymmärsi sentään ottaa teltan päälle pressun suojaksi.",
-  },
-  {
-    photo: mb28,
-    text: "Ilmeestä päätellen on toivoa paremmasta säästä.",
-  },
-  {
-    photo: mb29,
-    text: "Roadcaptainin henkilökohtainen suojavaruste, näillä festareilla paljonkin perinteistä kesäkumia hyödyllisempi",
-  },
-  {
-    photo: mb30,
-    text: "GSX 750 F & DR 800, näilläkin lähes loppuunajetuilla häksättimillä käytiin aikanaan useasti Jögevassa.",
-  },
+const images = [
+  mb1,
+  mb2,
+  mb3,
+  mb4,
+  mb5,
+  mb6,
+  mb7,
+  mb8,
+  mb9,
+  mb10,
+  mb11,
+  mb12,
+  mb13,
+  mb14,
+  mb15,
+  mb16,
+  mb17,
+  mb18,
+  mb19,
+  mb20,
+  mb21,
+  mb22,
+  mb23,
+  mb24,
+  mb25,
+  mb26,
+  mb27,
+  mb28,
+  mb29,
+  mb30,
+];
+
+const texts = [
+  "Odottamassa jögevatreffin paraatiin lähtöä vuonna 2010.",
+  "Kompakti teltta on kätevä!",
+  "Virolaista tienhoitoa Mustveen ja Jögevan väliltä joskus vanhaan hyvään aikaan. Kartalla tässä näkyi asfalttitie",
+  "Kiiregrilli luo tunnelmaa.",
+  "Rannarootsi odottaa grilliin pääsyä.",
+  "Tuusulanjärven rannalla grillailemassa vuonna 2020.",
+  "Jägalan vesiputous ja kuppi kuumaa saa motoristin hartaaksi.",
+  "Ajotauko porottavan auringon alla.",
+  "Pyörät parkissa, melkein kaikki sitä parasta merkkiä.",
+  "Kiluleib munaga, ihan parasta herkkua etelänaapurista.",
+  "Nykyinen pressa nuorena jäsenenä vuoden 2000 treffissä. Kyllä, prätkällä ulkoilmabaariin ajaminen oli ihan ok tuolloin.",
+  "Blackbirdin takakumi sileäksi burniksessa, paikalliset tykkäsivät kovasti ja osa tuli ihmettelemään jälkiä.",
+  "Nuori jäsen, nykyinen SGT näyttää peukkua kaatosateessa joskus 2000-luvun alkuvuosina, vaikka uimahommiksi telttailu menikin.",
+  "Vuonna 2000 oltiin, jos ei komeita niin ainakin melko nuoria.",
+  "Kaljaa, majoneesia ja tupakkia. Siinäpä ne tärkeimmät.",
+  "Jögevatreffin esiintymislava.",
+  "Lippu ja lippuvalo, kahteen Suzukiin köytettynä tottakai.",
+  "Vuoden 2022 ryhmäkuva. Tarkoitus oli hankkia mustat hupparit vaaleilla teksteillä, mutta jossain vaiheessa tieto katkesi ja päädyimme klu-klux-klanin väreihin.",
+  "Lauisen kyläkaupalla eväitä hakemassa.",
+  "Vuonna 2022 pistäydyimme paluumatkalla neuvostoaikaisissa ohjussiiloissa. Tie perille oli kamala, paikka kyllä varsin mielenkiintoinen.",
+  "Kun pyörä porsii matkalla niin veljeskansa auttaa.",
+  "Lauttaan pääsyä odottamassa, sade kuuluu välillä asiaan.",
+  "Yöllistä tunnelmaa telttamajoituksessa.",
+  "Saappaita ja sukkia kuivattelemassa ennen laivaan ajoa Tallinnassa.",
+  "Kun ilmatieteenlaitos lupaa sadetta seitsemän prosentin todennäköisyydella menee koko viikonloppu yleensä uimahommiksi.",
+  "Jögevatreffillä alkaa olemaan perinteitä, vanhimmilla kerholaisillakin alkaa olemaan kaksikymmentä reissua plakkarissa.",
+  "Sataa sataa lorisee, yksi ymmärsi sentään ottaa teltan päälle pressun suojaksi.",
+  "Ilmeestä päätellen on toivoa paremmasta säästä.",
+  "Roadcaptainin henkilökohtainen suojavaruste, näillä festareilla paljonkin perinteistä kesäkumia hyödyllisempi",
+  "GSX 750 F & DR 800, näilläkin lähes loppuunajetuilla häksättimillä käytiin aikanaan useasti Jögevassa.",
 ];
 
 export default function Gallery() {
   return (
     <div className="gallery">
-      {photos.map((photo) => (
-        <Images key={photo.photo} photos={photo} />
-      ))}
+      <Imagecarousel images={images} texts={texts} />
     </div>
   );
 }
