@@ -1,9 +1,9 @@
 .intro {
+  backdrop-filter: blur(7px);
   justify-content: center;
   text-align: center;
   display: flex;
   flex-direction: column;
-  background-color: transparent;
 }
 .h2 {
   padding: 1%;
@@ -16,6 +16,7 @@
   background-color: black;
   box-shadow: 0 1px 8px rgba(175, 109, 109, 0.25);
   transition: transform 0.2s;
+  backdrop-filter: blur(50px);
 }
 .p {
   padding: 1%;
@@ -28,4 +29,5 @@
   background-color: black;
   box-shadow: 0 1px 8px rgba(175, 109, 109, 0.25);
   transition: transform 0.2s;
+  backdrop-filter: blur(50px);
 }

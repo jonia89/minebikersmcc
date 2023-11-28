@@ -1,6 +1,6 @@
 import { useState } from "react";
 //import { motion, AnimatePresence } from "framer-motion";
-import "./Imagecarousel.css"
+import "./Imagecarousel.css";
 
 export default function Imagecarousel({ images, texts }) {
   const [currentImage, setCurrentImage] = useState(0);
@@ -39,10 +39,10 @@ export default function Imagecarousel({ images, texts }) {
       setCurrentText("");
     }
   };
-  const handleClick = (image, text) => {
+  /*const handleClick = (image, text) => {
     setCurrentImage(image);
     setCurrentText(text);
-  };
+  };*/
 
   return (
     <div className="carousel">
@@ -50,8 +50,8 @@ export default function Imagecarousel({ images, texts }) {
         key={currentImage}
         src={images[currentImage]}
         alt={currentImage}
-        width={700}
-        height={350}
+        width={600}
+        height={300}
       />
       <p>{texts[currentText]}</p>
       <div className="slide_direction">
@@ -80,7 +80,7 @@ export default function Imagecarousel({ images, texts }) {
             <div
               key={image}
               className={`dot ${currentImage === image ? "active" : ""}`}
-              onClick={() => handleClick(image)}
+              //onClick={() => handleClick(image)}
             ></div>
           ))}
         </div>

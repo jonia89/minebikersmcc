@@ -1,4 +1,5 @@
 .members {
+  backdrop-filter: blur(7px);
   justify-content: center;
   text-align: center;
   display: flex;

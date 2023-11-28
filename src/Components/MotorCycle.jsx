@@ -2,10 +2,15 @@ import { useState } from "react";
 import "./styleMotorCycle.css";
 
 export default function MotorCycle() {
-  const [drive, setDrive] = useState(0);
+  const [drive, setDrive] = useState("false");
 
   return (
-    <div className="container" onClick={() => setDrive(1)} drive={drive}>
+    <div
+      className="container"
+      onClick={() => setDrive("true")}
+      onDoubleClick={() => setDrive("false")}
+      drive={drive}
+    >
       <div className="bike-body">
         <div className="seat"></div>
         <div className="cover"></div>

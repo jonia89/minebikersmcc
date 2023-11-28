@@ -1,16 +1,17 @@
 .navbar {
   position: fixed;
   top: 0px;
-  width: 95%;
-  max-width: 100%;
-  background: transparent;
-  margin: 1%;
+  width: 100%;
+
+  background: black;
+  padding: 1%;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   gap: 1%;
   text-align: center;
   display: flex;
   flex-direction: row;
+  z-index: 1;
 }
 .navbutton {
   background-color: black;

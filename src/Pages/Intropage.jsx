@@ -1,4 +1,4 @@
-import "./Intropage.css"
+import "./Intropage.css";
 
 export default function Intro() {
   return (

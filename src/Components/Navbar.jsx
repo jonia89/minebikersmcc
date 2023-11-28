@@ -6,7 +6,7 @@ import Words from "../Pages/Wordpage";
 import Gallery from "../Pages/Gallerypage";
 import Members from "../Pages/Memberspage";
 import text from "../minebikerstext.png";
-import mcc from "../mcc.jpg";
+import mcc from "../mcctext.jpg";
 import Navbutton from "./Navbutton";
 import "./Navbar.css";
 
