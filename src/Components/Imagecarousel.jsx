@@ -53,7 +53,7 @@ export default function Imagecarousel({ images, texts }) {
         width={800}
         height={600}
       />
-      <p className="p">{texts[currentText]}</p>
+      <p className="p-carousel">{texts[currentText]}</p>
       <div className="slide_direction">
         <div className="left" onClick={handlePrevious}>
           <svg

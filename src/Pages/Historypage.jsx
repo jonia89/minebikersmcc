@@ -3,7 +3,7 @@ import "./Historypage.css";
 export default function History() {
   return (
     <div className="history">
-      <p className="p">
+      <p className="p-history">
         Joskus alkukesästä vuonna 2000 sekalainen joukko kokoontui Kaarelan
         VPK:n kerhohuoneelle aiheenaan moottoripyöräkerhon perustaminen.
         Palokunnassa oli havaittu muutamalla jäsenellä moottoripyörä ja
@@ -15,7 +15,7 @@ export default function History() {
         olisi koota paikallisia motoristeja yhteen. Homma pidettiin alussa hyvin
         vapaamuotoisena ilman virallista rekisteröintiä.{" "}
       </p>
-      <p className="p">
+      <p className="p-history">
         Nimen valinnassa painotettiin jotain Vantaan Kaivokselaan liittyvää tai
         viittaavaa. Lopulta loppusuoralle päätyivät Tattila MC sekä Minebikers.
         Ensimmäinen nimi viittasi ”tattiin” eli paikalliseen vesitorniin,
@@ -28,7 +28,7 @@ export default function History() {
         moottoripyöräilijä. Tunnusta on käytetty sekä vaatteissa että lipussa,
         jota on näytetty kokoontumisajojen yhteydessä.{" "}
       </p>
-      <p className="p">
+      <p className="p-history">
         Uuden kerhon ensimmäinen isompi tapahtuma oli saman kesän Jögevatreff,
         jonne saatiinkin lähes sataprosenttinen osanotto. Tapahtumasta tuli sen
         myötä vuosittainen päätapahtuma, jonne parhaimmillaan on saatu paikalle
@@ -39,7 +39,7 @@ export default function History() {
         kerholaisia on joskus nähty ja tietysti yksittäiset jäsenet ovat
         kantaneet värejämme ympäri eurooppaa mm. FIM ralleissa.{" "}
       </p>
-      <p className="p">
+      <p className="p-history">
         Kerhon aseman virallistaminen sai alkunsa kahvipöytäkeskusteluissa
         vuoden 2022 keväällä. Asia jäi hautumaan, kunnes saman kesän
         Jögevatreffissä päätettiin vihdoin alkaa tekemään asialle jotain.
@@ -55,7 +55,7 @@ export default function History() {
         olevamme kaikkiaan kuudesta hyväksyntää hakeneista kerhoista ainoa joka
         uskalsi hakea moniväritunnusta muiden tyytyessä mustavalkoisiin.{" "}
       </p>
-      <p className="p">
+      <p className="p-history">
         Presidenttejä kerholla on ollut vain kaksi tähän päivään mennessä,
         ensimmäinen kokous valitsi Hannu P:n tähän kunniakkaaseen tehtävään.
         Hannun into tehtävään hiipui vähitellen ja vuonna 2015 nykyinen
