@@ -50,10 +50,10 @@ export default function Imagecarousel({ images, texts }) {
         key={currentImage}
         src={images[currentImage]}
         alt={currentImage}
-        width={600}
-        height={300}
+        width={800}
+        height={600}
       />
-      <p>{texts[currentText]}</p>
+      <p className="p">{texts[currentText]}</p>
       <div className="slide_direction">
         <div className="left" onClick={handlePrevious}>
           <svg

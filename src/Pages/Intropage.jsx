@@ -3,8 +3,8 @@ import "./Intropage.css";
 export default function Intro() {
   return (
     <div className="intro">
-      <h2 className="h2">Minebikers MCC esittäytyy:</h2>
-      <p className="p">
+      <h2>Minebikers MCC esittäytyy:</h2>
+      <p>
         Minebikers on Vantaan Kaivokselassa vuonna 2000 perustettu ja edelleen
         toimiva moottoripyöräharrastajien kerho. Emme ole yhdistysrekisterissä,
         mutta keväällä 2023 haimme kerholle ja sen väreille hyväksynnän Biker
@@ -14,7 +14,7 @@ export default function Intro() {
         selittelemään valintaansa vähemmän ja isoon Intruderiin päätyneet saavat
         suitsutusta parhaasta mahdollisesta valinnasta.
       </p>
-      <p className="p">
+      <p>
         Parhaimmillaan 2000-luvun alkuvuosina jäseniä oli yli 20, mutta aika ja
         evoluutio ovat karsineet vanhemmasta päästä porukkaa sohvan hellään
         huomaan. Aktiivisten jäsenten määrä on tällä hetkellä 12 henkilöä ja
@@ -22,7 +22,7 @@ export default function Intro() {
         Kerhotiloja meillä ei vielä ole (haku on päällä) joten pyörien säilytys-
         ja huoltotoiminta on jäänyt jokaisen omaksi ratkaistavaksi.
       </p>
-      <p className="p">
+      <p>
         Vuosittaisena päätapahtumana on alusta alkaen ollut Viron Jögevassa
         heinä-elokuun vaihteessa järjestettävä Jögevatreff. Tämä lajinsa
         suurimpaan tapahtumiin euroopassa kuuluva jotos on vetänyt

@@ -1,13 +1,11 @@
 .carousel {
-  background-color: black;
-  margin-top: 10%;
-
+  backdrop-filter: blur(7px);
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-  flex-direction: column;
   text-align: center;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 7%;
+  padding-bottom: 7%;
 }
 
 .slide_direction {
@@ -51,4 +49,18 @@
 }
 .active {
   background-color: gold;
+}
+.p {
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-bottom: 3%;
+  padding-top: 2%;
+}
+
+.p:hover {
+  background-color: black;
+  box-shadow: 0 1px 8px rgba(175, 109, 109, 0.25);
+  transition: transform 0.2s;
+  margin-left: 25%;
+  margin-right: 25%;
 }

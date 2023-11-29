@@ -99,7 +99,7 @@ const texts = [
 
 export default function Gallery() {
   return (
-    <div className="gallery">
+    <div>
       <Imagecarousel images={images} texts={texts} />
     </div>
   );

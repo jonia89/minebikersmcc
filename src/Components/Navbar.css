@@ -9,7 +9,7 @@
   align-items: center;
   gap: 1%;
   text-align: center;
-  display: flex;
+  display: block;
   flex-direction: row;
   z-index: 1;
 }

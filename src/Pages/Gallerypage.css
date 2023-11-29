@@ -1,7 +1,0 @@
-.gallery {
-  backdrop-filter: blur(7px);
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
