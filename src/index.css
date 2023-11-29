@@ -14,14 +14,12 @@ body {
 }
 h2 {
   color: azure;
-}
-
-h3 {
-  color: bisque;
+  font-size: large;
 }
 
 p {
   color: antiquewhite;
+  font-size: large;
 }
 
 code {
