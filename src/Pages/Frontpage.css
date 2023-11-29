@@ -1,9 +1,4 @@
 .frontpage {
-  background-image: url(/src/mcclogo.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: 60% 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

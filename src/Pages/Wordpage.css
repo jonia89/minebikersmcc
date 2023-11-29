@@ -1,9 +1,9 @@
 .words {
   backdrop-filter: blur(7px);
- 
+
   text-align: center;
   display: flex;
   flex-direction: column;
   padding-top: 7%;
-  
+  padding-bottom: 7%;
 }

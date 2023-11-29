@@ -1,4 +1,5 @@
 import Imagecarousel from "../Components/Imagecarousel";
+import "./Gallerypage.css"
 
 import mb1 from "../Images/gallery/MineBikers1.jpg";
 import mb2 from "../Images/gallery/MineBikers2.jpg";
@@ -99,7 +100,7 @@ const texts = [
 
 export default function Gallery() {
   return (
-    <div>
+    <div className="gallery">
       <Imagecarousel images={images} texts={texts} />
     </div>
   );

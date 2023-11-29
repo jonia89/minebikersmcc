@@ -1,9 +1,9 @@
-.members {
+.gallery {
   backdrop-filter: blur(7px);
 
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding-top: 7%;
+  padding-top: 10%;
   padding-bottom: 100%;
 }
