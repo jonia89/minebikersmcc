@@ -2,15 +2,12 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbutton(props) {
-  const url = props.sites.url;
-  const site = props.sites.site;
-
   return (
     <NavLink
-      to={url}
+      to={props.sites.url}
       className={({ isActive }) => (isActive ? "active" : "inactive")}
     >
-      <button className="navbutton">{site}</button>
+      <button className="navbutton">{props.sites.title}</button>
     </NavLink>
   );
 }

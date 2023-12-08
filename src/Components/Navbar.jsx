@@ -10,32 +10,31 @@ import mcc from "../mcctext.jpg";
 import Navbutton from "./Navbutton";
 import "./Navbar.css";
 
-export default function Navbar() {
-  const sites = [
-    { site: "Etusivu", url: "/" },
-    { site: "Esittely", url: "/esittely" },
-    { site: "Historia", url: "/historia" },
-    { site: "Jäsenet", url: "/jäsenet" },
-    { site: "Galleria", url: "/galleria" },
-    { site: "Sanastoa", url: "/sanastoa" },
-  ];
+
+export default function Navbar(props) {
 
   return (
     <div>
       <BrowserRouter>
         <div className="navbar">
-          <img src={text} alt="Minebikers" />
-          {sites.map((site) => (
-            <Navbutton key={site.site} sites={site} />
-          ))}
-          <img src={mcc} alt="mcc" />
+          <div>
+            <img src={text} alt="Minebikers" />
+          </div>
+          <div>
+            {props.sites.map((site) => (
+              <Navbutton key={site.title} sites={site} />
+            ))}
+          </div>
+          <div>
+            <img src={mcc} alt="mcc" />
+          </div>
         </div>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/esittely" element={<Intro />} />
           <Route exact path="/historia" element={<History />} />
           <Route exact path="/galleria" element={<Gallery />} />
-          <Route exact path="/jäsenet" element={<Members />} />
+          <Route exact path="/jäsenet" element={<Members members={props.members} />} />
           <Route exact path="/sanastoa" element={<Words />} />
         </Routes>
       </BrowserRouter>

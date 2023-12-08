@@ -1,16 +1,14 @@
 .navbar {
   position: fixed;
+justify-content: center;
   top: 0px;
   width: 100%;
-
   background: black;
   padding: 1%;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  flex-direction: row;
   gap: 1%;
   text-align: center;
-  display: block;
-  flex-direction: row;
   z-index: 1;
 }
 .navbutton {
@@ -19,7 +17,8 @@
   color: cornsilk;
 }
 .navbutton:hover {
-  background-color: gold;
+  background-color: gainsboro;
+  color: black;
 }
 .active {
   transition: transform 0.2s;

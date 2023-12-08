@@ -109,6 +109,7 @@ export default function Words() {
       word: "Progu",
       explanation: "Kokelasjäsen jolla ei vielä oikeutta selkämerkkiin.",
     },
+    {word: "Queen bee", explanation: "Mehiläiskuningatar; Kerhon presidentin vaimo, jolle pitää olla kiva tai päälikkö suuttuu"},
     {
       word: "Rannarootsi",
       explanation:

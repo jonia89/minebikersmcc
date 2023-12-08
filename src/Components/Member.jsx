@@ -1,15 +1,12 @@
 import "./Member.css"
 
 export default function Member(props) {
-  const clickHandler = (event) => {
-    event.target.requestFullscreen();
-  };
 
   return (
     <div>
       <div className="member">
         <img
-          onClick={clickHandler}
+          
           src={props.members.photo}
           alt={props.members.name}
           width={300}

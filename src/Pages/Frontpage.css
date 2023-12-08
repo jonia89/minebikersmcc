@@ -5,13 +5,16 @@
 }
 .facebook {
   display: flex;
-  background-color: azure;
-  margin-top: 20%;
+
+  margin-top: 15%;
   z-index: 0;
+}
+.facebook-bg {
+  background-color: azure;
 }
 .instagram {
   display: flex;
-  margin-top: 20%;
+  margin-top: 15%;
   z-index: 0;
 }
 .mcstyle {
