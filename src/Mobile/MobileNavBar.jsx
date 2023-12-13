@@ -7,7 +7,7 @@ import "./MobileNavBar.css";
 import MobileHome from "./MobilePages/MobileFrontpage";
 import MobileIntro from "./MobilePages/MobileIntropage";
 import MobileHistory from "./MobilePages/MobileHistorypage";
-import Words from "../Pages/Wordpage";
+import MobileWords from "./MobilePages/MobileWordpage";
 import Gallery from "../Pages/Gallerypage";
 import MobileMembers from "./MobilePages/MobileMemberspage"
 
@@ -34,7 +34,7 @@ export default function MobileNavBar(props) {
           <Route exact path="/historia" element={<MobileHistory />} />
           <Route exact path="/jäsenet" element={<MobileMembers members={props.members} />} />
           <Route exact path="/galleria" element={<Gallery />} />
-          <Route exact path="/sanastoa" element={<Words />} />
+          <Route exact path="/sanastoa" element={<MobileWords />} />
         </Routes>
       </BrowserRouter>
     </div>

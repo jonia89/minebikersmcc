@@ -1,22 +1,21 @@
 .mobile-navbar {
-    position: fixed;
+  position: fixed;
   justify-content: center;
-    top: 0px;
-    width: 90%;
-    background: black;
-    padding: 1%;
-    display: flex;
-    flex-direction: row;
-    gap: 10%;
-    text-align: center;
-    z-index: 1;
-  }
-  .mobile-navbutton {
-    padding-left: 7%;
-    padding-right: 7%;
-    background-color: black;
-    font-size: 150%;
-    color: cornsilk;
-  }
+  top: 0px;
+  width: 90%;
+  background: black;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  text-align: center;
+  z-index: 1;
+}
+.mobile-navbutton {
+  padding-left: 7%;
+  padding-right: 7%;
 
-  
+  background-color: black;
+  font-size: 150%;
+  color: cornsilk;
+}

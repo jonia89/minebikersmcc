@@ -24,7 +24,7 @@
   position: fixed;
   display: flex;
   background: transparent;
-  margin-top: 10%;
+  bottom: -200px;
   z-index: 2;
 }
 .mobile-some-buttongroup {

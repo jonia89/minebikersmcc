@@ -1,6 +1,7 @@
 import { InstagramEmbed, FacebookEmbed } from "react-social-media-embed";
 import "./MobileFrontpage.css";
 import { useState } from "react";
+import MotorCycle from "../../Components/MotorCycle";
 
 export default function MobileHome() {
   const [facebookActive, setFacebookActive] = useState(false);
@@ -31,7 +32,9 @@ export default function MobileHome() {
           Instagram
         </button>
       </div>
-      <div className="mobile-mcstyle"></div>
+      <div className="mobile-mcstyle">
+        <MotorCycle />
+      </div>
       {facebookActive === true && instagramActive === false ? (
         <div className="mobile-facebook">
           <FacebookEmbed
