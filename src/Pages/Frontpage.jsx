@@ -1,4 +1,5 @@
 import { InstagramEmbed, FacebookEmbed } from "react-social-media-embed";
+import { facebookPosts, instagramPosts } from "../somePosts";
 import MotorCycle from "../Components/MotorCycle";
 import "./Frontpage.css";
 
@@ -11,15 +12,12 @@ export default function Home() {
       <div className="facebook">
         <FacebookEmbed
           className="facebook-bg"
-          url="https://www.facebook.com/photo/?fbid=205991242490523&set=a.125268610562787"
+          url={facebookPosts[0]}
           width={328}
         />
       </div>
       <div className="instagram">
-        <InstagramEmbed
-          url="https://www.instagram.com/p/CwcC7dkIHjy/"
-          width={328}
-        />
+        <InstagramEmbed url={instagramPosts[0]} width={328} />
       </div>
     </div>
   );

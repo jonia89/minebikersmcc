@@ -1,19 +1,5 @@
-.mobile-history {
-  text-align: center;
-  backdrop-filter: blur(7px);
-
-  padding-left: 7%;
-  padding-right: 7%;
-  padding-top: 10%;
-  padding-bottom: 7%;
-}
-.mobile-p-history {
-  background-color: black;
+.mobile-p-history-margin {
   margin-left: 2%;
   margin-right: 2%;
-  padding-bottom: 2%;
-  padding-top: 2%;
-  padding-left: 2%;
-  padding-right: 2%;
+  margin-top: 7%;
 }
-

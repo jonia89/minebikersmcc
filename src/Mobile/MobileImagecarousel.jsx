@@ -1,10 +1,11 @@
 import { useState } from "react";
 //import { motion, AnimatePresence } from "framer-motion";
-import "./Imagecarousel.css";
+import "./MobileImagecarousel.css";
 
-export default function Imagecarousel({ images, texts }) {
+export default function MobileImagecarousel({ images, texts }) {
   const [currentImage, setCurrentImage] = useState(0);
   const [currentText, setCurrentText] = useState(0);
+  //const [activeImage, setActiveImage] = useState("false");
 
   console.log("kuvat: ", images.length, " tekstit: ", texts.length);
 
@@ -39,22 +40,32 @@ export default function Imagecarousel({ images, texts }) {
       setCurrentText("");
     }
   };
-  /*const handleClick = (image, text) => {
+  /*const handleDotClick = (image, text) => {
     setCurrentImage(image);
     setCurrentText(text);
   };*/
 
+  /*const handleImageClick = () => {
+    if (activeImage === "false") {
+      setActiveImage("true");
+      console.log(activeImage)
+    } else {
+      setActiveImage("false");
+      console.log(activeImage)
+    }
+  };
+  */
   return (
-    <div className="carousel">
-      <img className="image-resize"
+    <div className="mobile-carousel">
+      <img
+        className="mobile-image-resize"
         key={currentImage}
         src={images[currentImage]}
         alt={currentImage}
-
       />
-      <p className="p-carousel">{texts[currentText]}</p>
-      <div className="slide_direction">
-        <div className="left" onClick={handlePrevious}>
+      <p className="mobile-p-carousel">{texts[currentText]}</p>
+      <div className="mobile-slide_direction">
+        <div className="mobile-left" onClick={handlePrevious}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="20"
@@ -64,7 +75,7 @@ export default function Imagecarousel({ images, texts }) {
             <path d="M400 976 0 576l400-400 56 57-343 343 343 343-56 57Z" />
           </svg>
         </div>
-        <div className="right" onClick={handleNext}>
+        <div className="mobile-right" onClick={handleNext}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="20"
@@ -74,12 +85,12 @@ export default function Imagecarousel({ images, texts }) {
             <path d="m304 974-56-57 343-343-343-343 56-57 400 400-400 400Z" />
           </svg>
         </div>
-        <div className="indicator">
+        <div className="mobile-indicator">
           {images.map((_, image) => (
             <div
               key={image}
-              className={`dot ${currentImage === image ? "active" : ""}`}
-              //onClick={() => handleClick(image)}
+              className={`mobile-dot ${currentImage === image ? "active" : ""}`}
+              //onClick={() => handleDotClick(image)}
             ></div>
           ))}
         </div>

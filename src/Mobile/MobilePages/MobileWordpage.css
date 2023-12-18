@@ -1,6 +1,6 @@
 .mobile-words {
   backdrop-filter: blur(7px);
-
+  margin-top: 7%;
   text-align: center;
   display: flex;
   flex-direction: column;

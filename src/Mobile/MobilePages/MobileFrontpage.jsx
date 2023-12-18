@@ -1,4 +1,5 @@
 import { InstagramEmbed, FacebookEmbed } from "react-social-media-embed";
+import { facebookPosts, instagramPosts } from "../../somePosts";
 import "./MobileFrontpage.css";
 import { useState } from "react";
 import MotorCycle from "../../Components/MotorCycle";
@@ -27,7 +28,7 @@ export default function MobileHome() {
       <div className="mobile-some-buttongroup">
         <button className="mobile-some-button" onClick={activateFacebook}>
           Facebook
-        </button>{" "}
+        </button>
         <button className="mobile-some-button" onClick={activateInstagram}>
           Instagram
         </button>
@@ -39,7 +40,7 @@ export default function MobileHome() {
         <div className="mobile-facebook">
           <FacebookEmbed
             className="mobile-facebook-bg"
-            url="https://www.facebook.com/photo/?fbid=205991242490523&set=a.125268610562787"
+            url={facebookPosts[0]}
             width={340}
           />
         </div>
@@ -49,10 +50,7 @@ export default function MobileHome() {
 
       {facebookActive === false && instagramActive === true ? (
         <div className="mobile-instagram">
-          <InstagramEmbed
-            url="https://www.instagram.com/p/CwcC7dkIHjy/"
-            width={340}
-          />
+          <InstagramEmbed url={instagramPosts[0]} width={340} />
         </div>
       ) : (
         ""

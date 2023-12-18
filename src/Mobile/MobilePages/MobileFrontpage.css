@@ -1,6 +1,7 @@
 .mobile-frontpage {
   display: flex;
   flex-direction: column;
+  margin-top: 7%;
 }
 .mobile-facebook {
   display: flex;

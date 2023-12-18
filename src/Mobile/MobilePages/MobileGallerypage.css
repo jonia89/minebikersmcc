@@ -1,9 +1,9 @@
-.gallery {
+.mobile-gallery {
   backdrop-filter: blur(7px);
   text-align: center;
   display: flex;
   flex-direction: column;
   padding-top: 1%;
   padding-bottom: 1%;
-  margin-top: 3%;
+  margin-top: 30%;
 }
