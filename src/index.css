@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-size: 90%;
+    background-size: 80%;
     background-color: black;
 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
@@ -13,6 +13,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  
   h2 {
     color: azure;
   }

@@ -40,3 +40,12 @@
   font-size: 100%;
   color: cornsilk;
 }
+.mobile-holiday-greeting {
+  position: fixed;
+  display: flex;
+  text-align: center;
+  color: red;
+  margin-top: 100%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
