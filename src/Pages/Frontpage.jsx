@@ -10,6 +10,9 @@ export default function Home() {
       <div className="mcstyle">
         <MotorCycle />
       </div>
+      <div>
+        <HolidayGreeter />
+      </div>
       <div className="frontpage">
         <div className="facebook">
           <FacebookEmbed
