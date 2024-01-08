@@ -3,8 +3,7 @@ import { facebookPosts, instagramPosts } from "../../somePosts";
 import "./MobileFrontpage.css";
 import { useState } from "react";
 import MotorCycle from "../../Components/MotorCycle";
-import MerryChristmas from "../../Components/Greetings/ChristmasGreeting";
-import HappyNewYear from "../../Components/Greetings/NewYearGreeting";
+import HolidayGreeter from "../../Components/HolidayGreeter";
 
 export default function MobileHome() {
   const [facebookActive, setFacebookActive] = useState(false);
@@ -37,9 +36,6 @@ export default function MobileHome() {
       </div>
       <div className="mobile-mcstyle">
         <MotorCycle />
-      </div>
-      <div className="mobile-holiday-greeting-newyear">
-        <HappyNewYear />
       </div>
       {facebookActive === true && instagramActive === false ? (
         <div className="mobile-facebook">
