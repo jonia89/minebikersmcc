@@ -6,7 +6,7 @@ export default function MobileNavButton(props) {
   const [activeMenu, setActiveMenu] = useState(false);
   let [siteView, setSiteView] = useState(props.sites[0].title);
 
-  function openMenu(event) {
+  function openMenu() {
     if (activeMenu === false) {
       setActiveMenu(true);
     } else {
