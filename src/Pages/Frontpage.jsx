@@ -1,7 +1,7 @@
 import { InstagramEmbed, FacebookEmbed } from "react-social-media-embed";
 import { facebookPosts, instagramPosts } from "../somePosts";
 import MotorCycle from "../Components/MotorCycle";
-import HolidayGreeter from "../Mobile/MobileHolidayGreeter";
+import HolidayGreeter from "../Components/HolidayGreeter";
 import "./Frontpage.css";
 
 export default function Home() {
@@ -9,6 +9,9 @@ export default function Home() {
     <div>
       <div className="mcstyle">
         <MotorCycle />
+      </div>
+      <div>
+        <HolidayGreeter />
       </div>
       <div className="frontpage">
         <div className="facebook">
