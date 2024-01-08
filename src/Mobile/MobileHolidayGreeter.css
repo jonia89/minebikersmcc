@@ -1,0 +1,18 @@
+.mobile-holiday-greeting-christmas {
+    position: fixed;
+    display: flex;
+    text-align: center;
+    color: red;
+    margin-top: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .mobile-holiday-greeting-newyear {
+    position: fixed;
+    display: flex;
+    text-align: center;
+    color: silver;
+    margin-top: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }

@@ -24,23 +24,4 @@
   margin-top: 15%;
   z-index: 2;
 }
-.holiday-greeting-christmas {
-  backdrop-filter: blur(2px);
-  position: fixed;
-  display: flex;
-  text-align: center;
-  color: red;
-  margin-top: 7%;
-  margin-left: 35%;
-  margin-right: 35%;
-}
-.holiday-greeting-newyear {
-  backdrop-filter: blur(2px);
-  position: fixed;
-  display: flex;
-  text-align: center;
-  color: silver;
-  margin-top: 7%;
-  margin-left: 35%;
-  margin-right: 35%;
-}
+
