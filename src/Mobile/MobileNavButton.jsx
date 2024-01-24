@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./MobileNavBar.css";
 import { Link } from "react-router-dom";
 
@@ -13,10 +13,12 @@ export default function MobileNavButton(props) {
       setActiveMenu(false);
     }
   }
+
   function handleButtonClick(event) {
     setActiveMenu(false);
     setSiteView(event.target.value);
   }
+
 
   return (
     <div>

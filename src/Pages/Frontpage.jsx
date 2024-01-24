@@ -5,6 +5,7 @@ import HolidayGreeter from "../Components/HolidayGreeter";
 import "./Frontpage.css";
 
 export default function Home() {
+
   return (
     <div>
       <div className="mcstyle">
