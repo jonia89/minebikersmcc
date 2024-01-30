@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./MobileNavBar.css";
+import dropdownIcon from "./dropdownicon.jpeg";
 import { Link } from "react-router-dom";
 
 export default function MobileNavButton(props) {
@@ -51,7 +52,14 @@ export default function MobileNavButton(props) {
         </div>
       ) : (
         <button className="mobile-navbutton" type="button" onClick={openMenu}>
-          {siteView}
+          <div style={{ display: "flex" }}>
+            {siteView}
+            <img
+              src={dropdownIcon}
+              alt="dropdown icon"
+              style={{ marginLeft: "8px" }}
+            />
+          </div>
         </button>
       )}
     </div>
