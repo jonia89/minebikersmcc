@@ -19,8 +19,6 @@ export default function IntroText() {
         evoluutio ovat karsineet vanhemmasta päästä porukkaa sohvan hellään
         huomaan. Aktiivisten jäsenten määrä on tällä hetkellä 12 henkilöä ja
         parhaimmillaan ajeluihin on saatu lähes kaikki liikekannalle.
-        Kerhotiloja meillä ei vielä ole (haku on päällä) joten pyörien säilytys-
-        ja huoltotoiminta on jäänyt jokaisen omaksi ratkaistavaksi.
       </p>
       <p className="p-intro">
         Vuosittaisena päätapahtumana on alusta alkaen ollut Viron Jögevassa
