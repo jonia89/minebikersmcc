@@ -1,0 +1,14 @@
+.guestbook {
+    backdrop-filter: blur(7px);
+  
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+    padding-bottom: 9%;
+    padding-left: 2%;
+    padding-right: 2%;
+  
+    margin-left: 30%;
+    margin-right: 30%;
+  }
