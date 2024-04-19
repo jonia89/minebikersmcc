@@ -13,10 +13,6 @@ const getWindowWidth = () => {
 export default function App() {
   const [currentWidth, setCurrentWidth] = useState();
 
-  
-
-  
-
   useEffect(() => {
     function handleResize() {
       setCurrentWidth(getWindowWidth());
@@ -26,6 +22,12 @@ export default function App() {
   }, []);
 
   return (
-    <div>{isMobile || currentWidth < 800 ? <MobileNavBar members={membersList} sites={siteList}/>  : <Navbar members={membersList} sites={siteList} />}</div>
+    <div>
+      {isMobile || currentWidth < 800 ? (
+        <MobileNavBar members={membersList} sites={siteList} />
+      ) : (
+        <Navbar members={membersList} sites={siteList} />
+      )}
+    </div>
   );
 }
