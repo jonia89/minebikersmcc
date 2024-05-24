@@ -17,8 +17,8 @@ export default function Home() {
         <div className="facebook">
           <FacebookEmbed
             className="facebook-bg"
-            url={facebookPosts[0]}
-            width={328}
+            url={facebookPosts}
+            width={350}
           />
         </div>
         <div className="instagram">
