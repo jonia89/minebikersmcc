@@ -2,24 +2,30 @@ import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 export default function ViewerCounter() {
-  const [count, setCount] = useState(0);
-  let [usedIds, setUsedIDS] = useState([]);
+  let [newVisitors, setNewVisitors] = useState(0);
+  let [uniqueVisitors, setUniqueVisitors] = useState([]);
 
   useEffect(() => {
-    const id = localStorage.getItem("userId") || uuidv4();
-    if (!(id in usedIds) && usedIds.length !== 0) {
-      setUsedIDS((prevUsedIds) => [prevUsedIds , id]);
-      console.log(usedIds);
-      const storedCount = localStorage.getItem("pageVisits");
-      const initialCount = storedCount ? Number(storedCount) : 0;
-      setCount(initialCount + 1);
-      localStorage.setItem("pageVisits", initialCount + 1);
-      localStorage.setItem("userId", id);
-    } else {
-      console.log("hello again", usedIds, id);
-      setUsedIDS(usedIds);
-    }
-  }, [usedIds]);
+    const userId = localStorage.getItem("userId") || uuidv4();
+    const storedUniqueVisitors =
+      JSON.parse(localStorage.getItem("uniqueVisitors")) || [];
 
-  return <div className="viewercounter">Sivua katsottu {count} kertaa</div>;
+    if (!storedUniqueVisitors.includes(userId)) {
+      const updatedUniqueVisitors = [...storedUniqueVisitors, userId];
+      localStorage.setItem(
+        "uniqueVisitors",
+        JSON.stringify(updatedUniqueVisitors)
+      );
+      setUniqueVisitors(updatedUniqueVisitors);
+      setNewVisitors(newVisitors + 1);
+      console.log("New visitor!", userId);
+    } else {
+      console.log("Already visited!", userId);
+    }
+
+    // Set the initial count of new visitors
+    setNewVisitors(storedUniqueVisitors.length);
+  }, []);
+
+  return <div>Olet {uniqueVisitors.length}. vierailija</div>;
 }
