@@ -3,6 +3,7 @@ import { facebookPosts, instagramPosts } from "../somePosts";
 import MotorCycle from "../Components/MotorCycle";
 import HolidayGreeter from "../Components/HolidayGreeter";
 import ViewerCounter from "../Components/ViewerCounter";
+import ErrorBoundary from "../Components/ErrorBoundary";
 import "./Frontpage.css";
 
 export default function Home() {
@@ -16,17 +17,23 @@ export default function Home() {
       </div>
       <div className="frontpage">
         <div className="facebook">
-          <FacebookEmbed
-            className="facebook-bg"
-            url={facebookPosts}
-            width={350}
-          />
+          <ErrorBoundary>
+            <FacebookEmbed
+              className="facebook-bg"
+              url={facebookPosts}
+              width={350}
+            />
+          </ErrorBoundary>
         </div>
         <div className="instagram">
-          <InstagramEmbed url={instagramPosts[0]} width={328} />
+          <ErrorBoundary>
+            <InstagramEmbed url={instagramPosts[0]} width={328} />
+          </ErrorBoundary>
         </div>
       </div>
-      <ViewerCounter />
+      <div className="viewercounter">
+        <ViewerCounter />
+      </div>
     </div>
   );
 }
