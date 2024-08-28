@@ -5,6 +5,7 @@
 }
 .facebook {
   display: flex;
+  background-color: black;
 
   margin-top: 15%;
   z-index: 0;
