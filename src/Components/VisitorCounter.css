@@ -1,0 +1,16 @@
+.visitor-data {
+  font-size: small;
+  color: antiquewhite;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  gap: 7%;
+}
+
+.visitor-header {
+  color: antiquewhite;
+  text-align: center;
+  margin-top: 2%;
+}
