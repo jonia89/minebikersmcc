@@ -33,5 +33,5 @@
   backdrop-filter: blur(2px);
 }
 .visitor-counter {
-  backdrop-filter: blur(1px);
+  background-color: black;
 }

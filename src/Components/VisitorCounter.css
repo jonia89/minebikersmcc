@@ -5,14 +5,15 @@
   justify-content: center;
   display: flex;
   flex-direction: row;
-  margin-top: 2%;
+  margin-top: 1%;
   gap: 7%;
 }
 
 .visitor-header {
   color: antiquewhite;
   text-align: center;
-  margin-top: 2%;
+  margin-top: 1%;
+  padding-top: 1%;
 }
 
 .visitor-footer {

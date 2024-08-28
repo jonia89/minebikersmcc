@@ -1,55 +1,55 @@
 [
     {
         "country": "Finland",
-        "visitors": 1820
+        "visitors": 3293
     },
     {
         "country": "United States",
-        "visitors": 1116
+        "visitors": 1512
     },
     {
         "country": "China",
-        "visitors": 87
+        "visitors": 93
     },
     {
         "country": "United Kingdom",
-        "visitors": 85
+        "visitors": 120
     },
     {
         "country": "France",
-        "visitors": 142
+        "visitors": 209
     },
     {
         "country": "Canada",
-        "visitors": 34
+        "visitors": 39
     },
     {
         "country": "Germany",
-        "visitors": 94
+        "visitors": 158
     },
     {
         "country": "Estonia",
-        "visitors": 21
+        "visitors": 76
     },
     {
         "country": "Netherlands",
-        "visitors": 175
+        "visitors": 193
     },
     {
         "country": "Ireland",
-        "visitors": 486
+        "visitors": 488
     },
     {
         "country": "Sweden",
-        "visitors": 20
+        "visitors": 41
     },
     {
         "country": "Russian Federation",
-        "visitors": 34
+        "visitors": 44
     },
     {
         "country": "India",
-        "visitors": 16
+        "visitors": 23
     },
     {
         "country": "South Africa",
@@ -57,7 +57,7 @@
     },
     {
         "country": "Honduras",
-        "visitors": 11
+        "visitors": 12
     },
     {
         "country": "Norway",
@@ -73,7 +73,7 @@
     },
     {
         "country": "Singapore",
-        "visitors": 5
+        "visitors": 7
     },
     {
         "country": "Spain",
@@ -89,11 +89,11 @@
     },
     {
         "country": "Bulgaria",
-        "visitors": 20
+        "visitors": 48
     },
     {
         "country": "Lithuania",
-        "visitors": 4
+        "visitors": 26
     },
     {
         "country": "Vietnam",
@@ -117,6 +117,34 @@
     },
     {
         "country": "Austria",
+        "visitors": 1
+    },
+    {
+        "country": "Poland",
+        "visitors": 70
+    },
+    {
+        "country": "Turkey",
+        "visitors": 4
+    },
+    {
+        "country": "Belgium",
+        "visitors": 3
+    },
+    {
+        "country": "Australia",
+        "visitors": 2
+    },
+    {
+        "country": "Georgia",
+        "visitors": 2
+    },
+    {
+        "country": "Luxembourg",
+        "visitors": 1
+    },
+    {
+        "country": "Latvia",
         "visitors": 1
     }
 ]
