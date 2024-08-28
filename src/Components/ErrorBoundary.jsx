@@ -13,7 +13,7 @@ export default class ErrorBoundary extends Component {
 
   render() {
     if (this.state.hasError) {
-      return <div>Something went wrong with the embedded content.</div>;
+      return <div style={{color: "white"}}>Something went wrong with the embedded content.</div>;
     }
 
     return this.props.children;
