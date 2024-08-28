@@ -40,7 +40,6 @@ export default function MobileHome() {
       <div>
         <MobileHolidayGreeter />
       </div>
-      <h3 className="mobile-info-text">Tämän viikon ajelut poikkeuksellisti huomenna torstaina. Lähtö Minebar pihasta klo 18. Tervetuloa mukaan letkaan!</h3>
       {facebookActive === true && instagramActive === false ? (
         <div className="mobile-facebook">
           <FacebookEmbed

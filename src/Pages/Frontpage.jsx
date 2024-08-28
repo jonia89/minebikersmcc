@@ -13,7 +13,6 @@ export default function Home() {
       </div>
       <div>
         <HolidayGreeter />
-        <h1 className="info-text">Tämän viikon ajelut poikkeuksellisti huomenna torstaina. Lähtö Minebar pihasta klo 18. Tervetuloa mukaan letkaan!</h1>
       </div>
       <div className="frontpage">
         <div className="facebook">

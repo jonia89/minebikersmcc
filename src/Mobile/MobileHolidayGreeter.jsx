@@ -1,6 +1,7 @@
 import MerryChristmas from "../Components/Greetings/ChristmasGreeting";
 import HappyNewYear from "../Components/Greetings/NewYearGreeting";
-import "./MobileHolidayGreeter.css"
+import JogevaGreeting from "../Components/Jogeva";
+import "./MobileHolidayGreeter.css";
 
 export default function MobileHolidayGreeter() {
   const date = new Date().toDateString().split(" ");
@@ -18,6 +19,13 @@ export default function MobileHolidayGreeter() {
       (date[1] === "Jan" && +date[2] < 7) ? (
         <div className="mobile-holiday-greeting-newyear">
           <HappyNewYear />
+        </div>
+      ) : (
+        ""
+      )}
+      {date[1] === "Jul" && +date[2] >= 25 && +date[2] <= 28 ? (
+        <div className="mobile-holiday-greeting-jögeva">
+          <JogevaGreeting />
         </div>
       ) : (
         ""
