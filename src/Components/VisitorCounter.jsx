@@ -9,6 +9,7 @@ export default function Visitors() {
     setVisitors(visitorData);
   }, []);
 
+  const totalVisitors = visitors.reduce((acc, curr) => acc + curr.visitors, 0);
   const sortedVisitors = visitors.sort((a, b) => b.visitors - a.visitors);
   const topFiveVisitors = sortedVisitors.slice(0, 5);
 
@@ -28,6 +29,9 @@ export default function Visitors() {
       ) : (
         <p>Loading visitor data...</p>
       )}
+      <div className="visitor-footer">
+        Vierailijoita yhteensä: {totalVisitors} 
+      </div>
     </div>
   );
 }

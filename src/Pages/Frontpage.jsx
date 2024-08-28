@@ -31,8 +31,8 @@ export default function Home() {
           </ErrorBoundary>
         </div>
       </div>
-      <div>
-          <Visitors />
+      <div className="visitor-counter">
+          <Visitors/>
         </div>
     </div>
   );
