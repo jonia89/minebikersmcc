@@ -1,0 +1,46 @@
+.visitor-data {
+  font-size: small;
+  color: antiquewhite;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1%;
+  margin-left: 7%;
+  margin-right: 7%;
+  gap: 4%;
+}
+.all-visitor-data {
+  font-size: small;
+  color: antiquewhite;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1%;
+  margin-left: 15%;
+  margin-right: 15%;
+  gap: 3%;
+}
+
+.visitor-header {
+  color: antiquewhite;
+  text-align: center;
+  margin-top: 1%;
+  padding-top: 1%;
+}
+
+.visitor-footer {
+  color: antiquewhite;
+  font-size: small;
+  text-align: center;
+  margin-top: 1%;
+}
+
+.show-all {
+  text-align: center;
+}
+
+.show-all-button {
+  font-size: x-small;
+  background-color: black;
+  color: rgb(168, 195, 196);
+}

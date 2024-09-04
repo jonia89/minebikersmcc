@@ -3,6 +3,7 @@ import { facebookPosts, instagramPosts } from "../somePosts";
 import MotorCycle from "../Components/MotorCycle";
 import HolidayGreeter from "../Components/HolidayGreeter";
 import ErrorBoundary from "../Components/ErrorBoundary";
+import Visitors from "../Components/VisitorCounter";
 import "./Frontpage.css";
 
 export default function Home() {
@@ -30,6 +31,9 @@ export default function Home() {
           </ErrorBoundary>
         </div>
       </div>
+      <div className="visitor-counter">
+          <Visitors/>
+        </div>
     </div>
   );
 }

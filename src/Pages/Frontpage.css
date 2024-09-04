@@ -23,9 +23,6 @@
   margin-top: 15%;
   z-index: 2;
 }
-.viewercounter {
-  z-index: -1;
-}
 .info-text {
   color: aliceblue;
   margin-top: 7%;
@@ -33,4 +30,7 @@
   padding: 1%;
   text-align: center;
   backdrop-filter: blur(2px);
+}
+.visitor-counter {
+  background-color: black;
 }
