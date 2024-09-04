@@ -1,37 +1,77 @@
 import { useState, useEffect } from "react";
 import visitorData from "../visitor_data.json";
 import "./VisitorCounter.css";
+import { flags } from "../importFlags";
 
 export default function Visitors() {
   const [visitors, setVisitors] = useState([]);
+  const [allVisitors, setAllVisitors] = useState(false);
+  const [visitorButtonText, setVisitorButtonText] = useState("Näytä kaikki");
 
   useEffect(() => {
     setVisitors(visitorData);
   }, []);
 
+  const visitorButtonHandler = () => {
+    if (allVisitors === false) {
+      setAllVisitors(true);
+      setVisitorButtonText("Näytä vähemmän");
+    } else {
+      setAllVisitors(false);
+      setVisitorButtonText("Näytä kaikki");
+    }
+    console.log(allVisitors);
+    return visitorButtonText;
+  };
+
   const totalVisitors = visitors.reduce((acc, curr) => acc + curr.visitors, 0);
   const sortedVisitors = visitors.sort((a, b) => b.visitors - a.visitors);
-  const topFiveVisitors = sortedVisitors.slice(0, 5);
+  const topTenVisitors = sortedVisitors.slice(0, 10);
+  const restVisitors = sortedVisitors.slice(10);
 
   return (
     <div>
       <div className="visitor-header">
-        <u> Eniten vierailijoita</u>
+        <u>Kävijöitä</u>
       </div>
-      {topFiveVisitors.length > 0 ? (
+      {topTenVisitors.length > 0 ? (
         <div className="visitor-data">
-          {topFiveVisitors.map((visitor, index) => (
+          {topTenVisitors.map((visitor, index) => (
             <div key={index}>
-              {visitor.country}: {visitor.visitors}
+              <img
+                src={flags[visitor.flag]}
+                alt={visitor.flag}
+                title={visitor.country}
+              />
+              {visitor.visitors}
             </div>
           ))}
         </div>
       ) : (
         <p>Loading visitor data...</p>
       )}
-      <div className="visitor-footer">
-        Vierailijoita yhteensä: {totalVisitors} 
+      {allVisitors === true ? (
+        <div className="all-visitor-data">
+          {restVisitors.map((visitor, index) => (
+            <div key={index}>
+              <img
+                src={flags[visitor.flag]}
+                alt={visitor.flag}
+                title={visitor.country}
+              />
+              {visitor.visitors}
+            </div>
+          ))}
+        </div>
+      ) : (
+        ""
+      )}
+      <div className="show-all">
+        <button className="show-all-button" onClick={visitorButtonHandler}>
+          {visitorButtonText}
+        </button>
       </div>
+      <div className="visitor-footer">Kävijöitä yhteensä: {totalVisitors}</div>
     </div>
   );
 }

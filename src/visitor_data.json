@@ -1,150 +1,187 @@
 [
     {
         "country": "Finland",
-        "visitors": 3293
+        "visitors": 3419,
+        "flag": "Finland.svg"
     },
     {
         "country": "United States",
-        "visitors": 1512
+        "visitors": 1539,
+        "flag": "United States.svg"
     },
     {
         "country": "China",
-        "visitors": 93
+        "visitors": 95,
+        "flag": "China.svg"
     },
     {
         "country": "United Kingdom",
-        "visitors": 120
+        "visitors": 120,
+        "flag": "United Kingdom.svg"
     },
     {
         "country": "France",
-        "visitors": 209
+        "visitors": 222,
+        "flag": "France.svg"
     },
     {
         "country": "Canada",
-        "visitors": 39
+        "visitors": 39,
+        "flag": "Canada.svg"
     },
     {
         "country": "Germany",
-        "visitors": 158
+        "visitors": 1055,
+        "flag": "Germany.svg"
     },
     {
         "country": "Estonia",
-        "visitors": 76
+        "visitors": 76,
+        "flag": "Estonia.svg"
     },
     {
         "country": "Netherlands",
-        "visitors": 193
+        "visitors": 193,
+        "flag": "Netherlands.svg"
     },
     {
         "country": "Ireland",
-        "visitors": 488
+        "visitors": 489,
+        "flag": "Ireland.svg"
     },
     {
         "country": "Sweden",
-        "visitors": 41
+        "visitors": 41,
+        "flag": "Sweden.svg"
     },
     {
         "country": "Russian Federation",
-        "visitors": 44
+        "visitors": 44,
+        "flag": "Russian Federation.svg"
     },
     {
         "country": "India",
-        "visitors": 23
+        "visitors": 23,
+        "flag": "India.svg"
     },
     {
         "country": "South Africa",
-        "visitors": 8
+        "visitors": 8,
+        "flag": "South Africa.svg"
     },
     {
         "country": "Honduras",
-        "visitors": 12
+        "visitors": 12,
+        "flag": "Honduras.svg"
     },
     {
         "country": "Norway",
-        "visitors": 3
+        "visitors": 3,
+        "flag": "Norway.svg"
     },
     {
         "country": "Brazil",
-        "visitors": 2
+        "visitors": 2,
+        "flag": "Brazil.svg"
     },
     {
         "country": "Belize",
-        "visitors": 3
+        "visitors": 3,
+        "flag": "Belize.svg"
     },
     {
         "country": "Singapore",
-        "visitors": 7
+        "visitors": 7,
+        "flag": "Singapore.svg"
     },
     {
         "country": "Spain",
-        "visitors": 1
+        "visitors": 1,
+        "flag": "Spain.svg"
     },
     {
         "country": "Israel",
-        "visitors": 3
+        "visitors": 3,
+        "flag": "Israel.svg"
     },
     {
         "country": "Japan",
-        "visitors": 1
+        "visitors": 1,
+        "flag": "Japan.svg"
     },
     {
         "country": "Bulgaria",
-        "visitors": 48
+        "visitors": 56,
+        "flag": "Bulgaria.svg"
     },
     {
         "country": "Lithuania",
-        "visitors": 26
+        "visitors": 26,
+        "flag": "Lithuania.svg"
     },
     {
         "country": "Vietnam",
-        "visitors": 4
+        "visitors": 4,
+        "flag": "Vietnam.svg"
     },
     {
         "country": "Denmark",
-        "visitors": 2
+        "visitors": 2,
+        "flag": "Denmark.svg"
     },
     {
         "country": "Iceland",
-        "visitors": 2
+        "visitors": 2,
+        "flag": "Iceland.svg"
     },
     {
         "country": "Maldives",
-        "visitors": 2
+        "visitors": 2,
+        "flag": "Maldives.svg"
     },
     {
         "country": "Thailand",
-        "visitors": 2
+        "visitors": 2,
+        "flag": "Thailand.svg"
     },
     {
         "country": "Austria",
-        "visitors": 1
+        "visitors": 1,
+        "flag": "Austria.svg"
     },
     {
         "country": "Poland",
-        "visitors": 70
+        "visitors": 70,
+        "flag": "Poland.svg"
     },
     {
         "country": "Turkey",
-        "visitors": 4
+        "visitors": 4,
+        "flag": "Turkey.svg"
     },
     {
         "country": "Belgium",
-        "visitors": 3
+        "visitors": 7,
+        "flag": "Belgium.svg"
     },
     {
         "country": "Australia",
-        "visitors": 2
+        "visitors": 2,
+        "flag": "Australia.svg"
     },
     {
         "country": "Georgia",
-        "visitors": 2
+        "visitors": 2,
+        "flag": "Georgia.svg"
     },
     {
         "country": "Luxembourg",
-        "visitors": 1
+        "visitors": 1,
+        "flag": "Luxembourg.svg"
     },
     {
         "country": "Latvia",
-        "visitors": 1
+        "visitors": 1,
+        "flag": "Latvia.svg"
     }
 ]
