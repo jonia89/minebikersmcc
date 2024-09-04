@@ -39,6 +39,7 @@ export default function Visitors() {
           {topTenVisitors.map((visitor, index) => (
             <div key={index}>
               <img
+                style={{ border: "1px groove white" }}
                 src={flags[visitor.flag]}
                 alt={visitor.flag}
                 title={visitor.country}
@@ -55,6 +56,7 @@ export default function Visitors() {
           {restVisitors.map((visitor, index) => (
             <div key={index}>
               <img
+                style={{ border: "1px groove white" }}
                 src={flags[visitor.flag]}
                 alt={visitor.flag}
                 title={visitor.country}
