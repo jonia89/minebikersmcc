@@ -1,12 +1,12 @@
 [
     {
         "country": "Finland",
-        "visitors": 3419,
+        "visitors": 4086,
         "flag": "Finland.svg"
     },
     {
         "country": "United States",
-        "visitors": 1539,
+        "visitors": 1593,
         "flag": "United States.svg"
     },
     {
@@ -16,12 +16,12 @@
     },
     {
         "country": "United Kingdom",
-        "visitors": 120,
+        "visitors": 129,
         "flag": "United Kingdom.svg"
     },
     {
         "country": "France",
-        "visitors": 222,
+        "visitors": 235,
         "flag": "France.svg"
     },
     {
@@ -31,7 +31,7 @@
     },
     {
         "country": "Germany",
-        "visitors": 1055,
+        "visitors": 1061,
         "flag": "Germany.svg"
     },
     {
@@ -41,7 +41,7 @@
     },
     {
         "country": "Netherlands",
-        "visitors": 193,
+        "visitors": 2935,
         "flag": "Netherlands.svg"
     },
     {
@@ -91,7 +91,7 @@
     },
     {
         "country": "Singapore",
-        "visitors": 7,
+        "visitors": 9,
         "flag": "Singapore.svg"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
         "country": "Bulgaria",
-        "visitors": 56,
+        "visitors": 60,
         "flag": "Bulgaria.svg"
     },
     {
@@ -161,7 +161,7 @@
     },
     {
         "country": "Belgium",
-        "visitors": 7,
+        "visitors": 12,
         "flag": "Belgium.svg"
     },
     {
@@ -183,5 +183,10 @@
         "country": "Latvia",
         "visitors": 1,
         "flag": "Latvia.svg"
+    },
+    {
+        "country": "Bangladesh",
+        "visitors": 2,
+        "flag": "Bangladesh.svg"
     }
 ]

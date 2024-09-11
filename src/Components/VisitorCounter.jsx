@@ -1,3 +1,7 @@
+/* Thanks to catamphetamine!
+https://github.com/catamphetamine/country-flag-icons/tree/master
+#svg #country_flag_icons
+*/
 import { useState, useEffect } from "react";
 import visitorData from "../visitor_data.json";
 import "./VisitorCounter.css";
