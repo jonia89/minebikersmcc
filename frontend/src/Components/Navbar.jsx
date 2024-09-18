@@ -5,14 +5,13 @@ import History from "../Pages/Historypage";
 import Words from "../Pages/Wordpage";
 import Gallery from "../Pages/Gallerypage";
 import Members from "../Pages/Memberspage";
+import Guestbook from "../Pages/Guestbookpage";
 import text from "../minebikerstext.png";
 import mcc from "../mcctext.jpg";
 import Navbutton from "./Navbutton";
 import "./Navbar.css";
 
-
 export default function Navbar(props) {
-
   return (
     <div>
       <BrowserRouter>
@@ -34,8 +33,13 @@ export default function Navbar(props) {
           <Route exact path="/esittely" element={<Intro />} />
           <Route exact path="/historia" element={<History />} />
           <Route exact path="/galleria" element={<Gallery />} />
-          <Route exact path="/jäsenet" element={<Members members={props.members} />} />
+          <Route
+            exact
+            path="/jäsenet"
+            element={<Members members={props.members} />}
+          />
           <Route exact path="/sanastoa" element={<Words />} />
+          <Route exact path="/vieraskirja" element={<Guestbook />} />
         </Routes>
       </BrowserRouter>
     </div>
