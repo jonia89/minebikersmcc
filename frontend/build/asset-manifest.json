@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3c19bcff.css",
-    "main.js": "/static/js/main.b5534164.js",
+    "main.css": "/static/css/main.9b3caaf3.css",
+    "main.js": "/static/js/main.d33231c9.js",
     "static/media/MineBikers11.jpg": "/static/media/MineBikers11.5627cf6803293a44cec7.jpg",
     "static/media/MineBikers14.jpg": "/static/media/MineBikers14.076f6f9bbb130ae596bf.jpg",
     "static/media/MineBikers7.jpg": "/static/media/MineBikers7.a8d9e829ed64115c8894.jpg",
@@ -284,18 +284,18 @@
     "static/media/GN.svg": "/static/media/GN.0ec7cfdfd99d6e3b48c9.svg",
     "static/media/IC.svg": "/static/media/IC.ea49ab46f18c31653925.svg",
     "static/media/MC.svg": "/static/media/MC.a0466581296ae720b502.svg",
-    "static/media/UA.svg": "/static/media/UA.db87c8ef866ad81895bc.svg",
+    "static/media/Ukraine.svg": "/static/media/Ukraine.db87c8ef866ad81895bc.svg",
     "static/media/PW.svg": "/static/media/PW.db058f1c3331a2e6dcb9.svg",
     "static/media/Bangladesh.svg": "/static/media/Bangladesh.084095e112eeb2d6b93e.svg",
     "static/media/MQ.svg": "/static/media/MQ.ce5d6bd37f15e30af2e6.svg",
     "static/media/ID.svg": "/static/media/ID.3cdc975eac05cdc50c89.svg",
     "static/media/Japan.svg": "/static/media/Japan.9c0cea811c5e9d0e6256.svg",
     "static/media/BO.svg": "/static/media/BO.25882474a86156dabe92.svg",
-    "main.3c19bcff.css.map": "/static/css/main.3c19bcff.css.map",
-    "main.b5534164.js.map": "/static/js/main.b5534164.js.map"
+    "main.9b3caaf3.css.map": "/static/css/main.9b3caaf3.css.map",
+    "main.d33231c9.js.map": "/static/js/main.d33231c9.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c19bcff.css",
-    "static/js/main.b5534164.js"
+    "static/css/main.9b3caaf3.css",
+    "static/js/main.d33231c9.js"
   ]
 }
