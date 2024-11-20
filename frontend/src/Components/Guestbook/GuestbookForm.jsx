@@ -1,25 +1,40 @@
 import { useState } from "react";
+import { v4 as uuid } from "uuid";
 import "./Guestbook.css";
 
 export default function GuestbookForm() {
   const [nickname, setNickname] = useState("");
-  const [message, setMessage] = useState("");
+  const [post, setPost] = useState("");
 
   const handleNameChange = (event) => {
     setNickname(event.target.value);
   };
 
   const handleMessageChange = (event) => {
-    setMessage(event.target.value);
+    setPost(event.target.value);
   };
 
   const handleMessageSubmit = (event) => {
     event.preventDefault();
-    if (nickname.length > 3 && message.length > 3) {
-      console.log(nickname + ":", message);
-      console.log("Lähetetty");
+    if (nickname.length > 0 && post.length > 0) {
+      const postId = uuid();
+      const userId = uuid();
+      const addMessage = async () => {
+        try {
+          const response = await fetch("http://localhost:8080/vieraskirja", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({}),
+          });
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      addMessage();
       setNickname("");
-      setMessage("");
+      setPost("");
     } else {
       alert("Nimimerkin pituus tai viesti on liian lyhyt");
     }
@@ -39,7 +54,7 @@ export default function GuestbookForm() {
         />
       </div>
       <textarea
-        value={message}
+        value={post}
         className="tekstikenttä"
         placeholder="kirjoita viesti"
         onChange={handleMessageChange}

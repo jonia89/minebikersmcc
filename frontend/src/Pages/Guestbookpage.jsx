@@ -17,7 +17,6 @@ export default function Guestbook() {
     };
     getPosts();
   }, []);
-console.log(messages)
 
   return (
     <div className="guestbook">
