@@ -1,6 +1,6 @@
 import MerryChristmas from "./Greetings/ChristmasGreeting";
 import HappyNewYear from "./Greetings/NewYearGreeting";
-import JogevaGreeting from "./Jogeva";
+import JogevaGreeting from "./Greetings/Jogeva";
 import "./HolidayGreeter.css";
 
 export default function HolidayGreeter() {

@@ -1,11 +1,57 @@
 import { useState } from "react";
-import { v4 as uuid } from "uuid";
 import "./Guestbook.css";
 
 export default function GuestbookForm() {
   const [nickname, setNickname] = useState("");
   const [post, setPost] = useState("");
 
+  //Funktiot
+  const addUser = async () => {
+    try {
+      await fetch("http://localhost:8080/vieraskirja/user", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nimi: nickname,
+          ip_osoite: "127.0.0.1",
+          human: true,
+        }),
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  //
+  const addMessage = async (userId) => {
+    try {
+      await fetch("http://localhost:8080/vieraskirja/post", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nimi_id: userId,
+          viesti: post,
+          aika: new Date().toISOString().slice(0, 19).replace("T", " "),
+        }),
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  //
+  const getUserId = async (nickname) => {
+    try {
+      const response = await fetch(`/vieraskirja/${nickname}`);
+      const user = await response.json();
+      return user.id;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  //////////////////////////////////////////
   const handleNameChange = (event) => {
     setNickname(event.target.value);
   };
@@ -14,27 +60,28 @@ export default function GuestbookForm() {
     setPost(event.target.value);
   };
 
-  const handleMessageSubmit = (event) => {
+  const handleMessageSubmit = async (event) => {
     event.preventDefault();
     if (nickname.length > 0 && post.length > 0) {
-      const postId = uuid();
-      const userId = uuid();
-      const addMessage = async () => {
-        try {
-          const response = await fetch("http://localhost:8080/vieraskirja", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({}),
-          });
-        } catch (error) {
-          console.error(error);
+      try {
+        await addUser(nickname);
+        const userId = await getUserId(nickname);
+        if (!userId) {
+          console.log("käyttäjää ei löytynyt");
         }
-      };
-      addMessage();
-      setNickname("");
-      setPost("");
+        await addMessage();
+        console.log("käyttäjä:", nickname);
+        console.log(
+          "viesti;",
+          userId,
+          post,
+          new Date().toISOString().slice(0, 19).replace("T", " ")
+        );
+        setNickname("");
+        setPost("");
+      } catch (error) {
+        console.error(error);
+      }
     } else {
       alert("Nimimerkin pituus tai viesti on liian lyhyt");
     }

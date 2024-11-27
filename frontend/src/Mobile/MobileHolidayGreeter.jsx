@@ -1,6 +1,6 @@
 import MerryChristmas from "../Components/Greetings/ChristmasGreeting";
 import HappyNewYear from "../Components/Greetings/NewYearGreeting";
-import JogevaGreeting from "../Components/Jogeva";
+import JogevaGreeting from "../Components/Greetings/Jogeva";
 import "./MobileHolidayGreeter.css";
 
 export default function MobileHolidayGreeter() {
