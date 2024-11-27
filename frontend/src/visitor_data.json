@@ -1,27 +1,27 @@
 [
     {
         "country": "Finland",
-        "visitors": 5602,
+        "visitors": 5860,
         "flag": "Finland.svg"
     },
     {
         "country": "United States",
-        "visitors": 2304,
+        "visitors": 2478,
         "flag": "United States.svg"
     },
     {
         "country": "China",
-        "visitors": 102,
+        "visitors": 104,
         "flag": "China.svg"
     },
     {
         "country": "United Kingdom",
-        "visitors": 260,
+        "visitors": 268,
         "flag": "United Kingdom.svg"
     },
     {
         "country": "France",
-        "visitors": 262,
+        "visitors": 282,
         "flag": "France.svg"
     },
     {
@@ -31,7 +31,7 @@
     },
     {
         "country": "Germany",
-        "visitors": 1189,
+        "visitors": 1212,
         "flag": "Germany.svg"
     },
     {
@@ -41,12 +41,12 @@
     },
     {
         "country": "Netherlands",
-        "visitors": 2974,
+        "visitors": 2978,
         "flag": "Netherlands.svg"
     },
     {
         "country": "Ireland",
-        "visitors": 500,
+        "visitors": 978,
         "flag": "Ireland.svg"
     },
     {
@@ -61,7 +61,7 @@
     },
     {
         "country": "India",
-        "visitors": 35,
+        "visitors": 40,
         "flag": "India.svg"
     },
     {
@@ -91,7 +91,7 @@
     },
     {
         "country": "Singapore",
-        "visitors": 34,
+        "visitors": 50,
         "flag": "Singapore.svg"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
         "country": "Bulgaria",
-        "visitors": 140,
+        "visitors": 218,
         "flag": "Bulgaria.svg"
     },
     {
@@ -161,7 +161,7 @@
     },
     {
         "country": "Belgium",
-        "visitors": 17,
+        "visitors": 33,
         "flag": "Belgium.svg"
     },
     {
@@ -208,5 +208,15 @@
         "country": "Indonesia",
         "visitors": 14,
         "flag": "Indonesia.svg"
+    },
+    {
+        "country": "Hong Kong",
+        "visitors": 12,
+        "flag": "Hong Kong.svg"
+    },
+    {
+        "country": "Romania",
+        "visitors": 1,
+        "flag": "Romania.svg"
     }
 ]
