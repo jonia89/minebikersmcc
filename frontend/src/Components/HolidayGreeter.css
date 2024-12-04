@@ -4,8 +4,8 @@
     display: flex;
     text-align: center;
     color: red;
-    margin-top: 7%;
-    margin-left: 35%;
+    margin-top: 10%;
+    margin-left: 37%;
     margin-right: 35%;
   }
   .holiday-greeting-newyear {
@@ -14,7 +14,17 @@
     display: flex;
     text-align: center;
     color: silver;
-    margin-top: 7%;
+    margin-top: 10%;
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+  .holiday-greeting-indepedence {
+    backdrop-filter: blur(2px);
+    position: fixed;
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-top: 10%;
     margin-left: 35%;
     margin-right: 35%;
   }
@@ -24,7 +34,7 @@
     display: flex;
     text-align: center;
     color: firebrick;
-    margin-top: 7%;
+    margin-top: 10%;
     margin-left: 45%;
     margin-right: 35%;
   }

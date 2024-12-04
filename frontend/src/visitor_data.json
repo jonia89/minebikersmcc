@@ -1,12 +1,12 @@
 [
     {
         "country": "Finland",
-        "visitors": 5860,
+        "visitors": 5955,
         "flag": "Finland.svg"
     },
     {
         "country": "United States",
-        "visitors": 2478,
+        "visitors": 3544,
         "flag": "United States.svg"
     },
     {
@@ -21,7 +21,7 @@
     },
     {
         "country": "France",
-        "visitors": 282,
+        "visitors": 293,
         "flag": "France.svg"
     },
     {
@@ -31,7 +31,7 @@
     },
     {
         "country": "Germany",
-        "visitors": 1212,
+        "visitors": 1244,
         "flag": "Germany.svg"
     },
     {
@@ -41,7 +41,7 @@
     },
     {
         "country": "Netherlands",
-        "visitors": 2978,
+        "visitors": 2995,
         "flag": "Netherlands.svg"
     },
     {
@@ -56,7 +56,7 @@
     },
     {
         "country": "Russian Federation",
-        "visitors": 54,
+        "visitors": 56,
         "flag": "Russian Federation.svg"
     },
     {
@@ -91,7 +91,7 @@
     },
     {
         "country": "Singapore",
-        "visitors": 50,
+        "visitors": 51,
         "flag": "Singapore.svg"
     },
     {
@@ -101,7 +101,7 @@
     },
     {
         "country": "Israel",
-        "visitors": 3,
+        "visitors": 7,
         "flag": "Israel.svg"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
         "country": "Bulgaria",
-        "visitors": 218,
+        "visitors": 220,
         "flag": "Bulgaria.svg"
     },
     {
@@ -126,7 +126,7 @@
     },
     {
         "country": "Denmark",
-        "visitors": 4,
+        "visitors": 5,
         "flag": "Denmark.svg"
     },
     {
@@ -166,7 +166,7 @@
     },
     {
         "country": "Australia",
-        "visitors": 934,
+        "visitors": 935,
         "flag": "Australia.svg"
     },
     {
@@ -211,12 +211,17 @@
     },
     {
         "country": "Hong Kong",
-        "visitors": 12,
+        "visitors": 14,
         "flag": "Hong Kong.svg"
     },
     {
         "country": "Romania",
-        "visitors": 1,
+        "visitors": 2,
         "flag": "Romania.svg"
+    },
+    {
+        "country": "Hungary",
+        "visitors": 2,
+        "flag": "Hungary.svg"
     }
 ]

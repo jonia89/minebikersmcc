@@ -1,6 +1,7 @@
 import MerryChristmas from "../Components/Greetings/ChristmasGreeting";
 import HappyNewYear from "../Components/Greetings/NewYearGreeting";
 import JogevaGreeting from "../Components/Jogeva";
+import Independence from "../Components/Greetings/IndependenceDay";
 import "./MobileHolidayGreeter.css";
 
 export default function MobileHolidayGreeter() {
@@ -8,7 +9,7 @@ export default function MobileHolidayGreeter() {
 
   return (
     <div>
-      {date[1] === "Dec" && +date[2] > 0 && +date[2] < 27 ? (
+      {date[1] === "Dec" && +date[2] > 0 && +date[2] < 27 && +date[2] !== 6 ? (
         <div className="mobile-holiday-greeting-christmas">
           <MerryChristmas />
         </div>
@@ -26,6 +27,13 @@ export default function MobileHolidayGreeter() {
       {date[1] === "Jul" && +date[2] >= 25 && +date[2] <= 28 ? (
         <div className="mobile-holiday-greeting-jögeva">
           <JogevaGreeting />
+        </div>
+      ) : (
+        ""
+      )}
+      {date[1] === "Dec" && +date[2] === 6 ? (
+        <div className="mobile-holiday-greeting-independence">
+          <Independence />
         </div>
       ) : (
         ""

@@ -25,3 +25,12 @@
     margin-left: 30%;
     margin-right: 2%;
   }
+  .mobile-holiday-greeting-independence {
+    position: fixed;
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-top: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
