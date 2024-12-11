@@ -1,12 +1,12 @@
 [
     {
         "country": "Finland",
-        "visitors": 5955,
+        "visitors": 6109,
         "flag": "Finland.svg"
     },
     {
         "country": "United States",
-        "visitors": 3544,
+        "visitors": 3644,
         "flag": "United States.svg"
     },
     {
@@ -16,12 +16,12 @@
     },
     {
         "country": "United Kingdom",
-        "visitors": 268,
+        "visitors": 273,
         "flag": "United Kingdom.svg"
     },
     {
         "country": "France",
-        "visitors": 293,
+        "visitors": 302,
         "flag": "France.svg"
     },
     {
@@ -31,7 +31,7 @@
     },
     {
         "country": "Germany",
-        "visitors": 1244,
+        "visitors": 1265,
         "flag": "Germany.svg"
     },
     {
@@ -46,7 +46,7 @@
     },
     {
         "country": "Ireland",
-        "visitors": 978,
+        "visitors": 979,
         "flag": "Ireland.svg"
     },
     {
@@ -56,7 +56,7 @@
     },
     {
         "country": "Russian Federation",
-        "visitors": 56,
+        "visitors": 58,
         "flag": "Russian Federation.svg"
     },
     {
@@ -71,7 +71,7 @@
     },
     {
         "country": "Honduras",
-        "visitors": 13,
+        "visitors": 15,
         "flag": "Honduras.svg"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
         "country": "Bulgaria",
-        "visitors": 220,
+        "visitors": 222,
         "flag": "Bulgaria.svg"
     },
     {
@@ -151,7 +151,7 @@
     },
     {
         "country": "Poland",
-        "visitors": 76,
+        "visitors": 88,
         "flag": "Poland.svg"
     },
     {
@@ -166,7 +166,7 @@
     },
     {
         "country": "Australia",
-        "visitors": 935,
+        "visitors": 951,
         "flag": "Australia.svg"
     },
     {
@@ -223,5 +223,15 @@
         "country": "Hungary",
         "visitors": 2,
         "flag": "Hungary.svg"
+    },
+    {
+        "country": "Cambodia",
+        "visitors": 2,
+        "flag": "Cambodia.svg"
+    },
+    {
+        "country": "Mauritius",
+        "visitors": 1,
+        "flag": "Mauritius.svg"
     }
 ]
