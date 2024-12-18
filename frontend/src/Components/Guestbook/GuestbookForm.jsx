@@ -1,30 +1,36 @@
 import { useState } from "react";
 import "./Guestbook.css";
 
-export default function GuestbookForm() {
+export default function GuestbookForm(props) {
   const [nickname, setNickname] = useState("");
+  const [userId, setUserId] = useState(null);
   const [post, setPost] = useState("");
 
   //Funktiot
-  const addUser = async () => {
+  const addUser = async (nickname) => {
     try {
-      await fetch("http://localhost:8080/vieraskirja/user", {
+      const response = await fetch("http://localhost:8080/vieraskirja/user", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
           nimi: nickname,
-          ip_osoite: "127.0.0.1",
-          human: true,
+          ip_osoite: "0.0.0.0.0",
+          ihminen: true,
         }),
       });
+      if (!response.ok) {
+        throw new Error("Failed to create user");
+      }
+      const data = await response.json();
+      return data.nimi_id;
     } catch (error) {
       console.error(error);
     }
   };
   //
-  const addMessage = async (userId) => {
+  const addMessage = async (userId, message) => {
     try {
       await fetch("http://localhost:8080/vieraskirja/post", {
         method: "POST",
@@ -33,7 +39,7 @@ export default function GuestbookForm() {
         },
         body: JSON.stringify({
           nimi_id: userId,
-          viesti: post,
+          viesti: message,
           aika: new Date().toISOString().slice(0, 19).replace("T", " "),
         }),
       });
@@ -44,13 +50,30 @@ export default function GuestbookForm() {
   //
   const getUserId = async (nickname) => {
     try {
-      const response = await fetch(`/vieraskirja/${nickname}`);
+      const response = await fetch(
+        `http://localhost:8080/vieraskirja/${nickname}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      if (!response.ok) {
+        throw new Error("Failed to fetch user ID");
+      }
       const user = await response.json();
-      return user.id;
+      if (!user) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return user.nimi_id;
     } catch (error) {
       console.error(error);
     }
+
   };
+  
+
   //////////////////////////////////////////
   const handleNameChange = (event) => {
     setNickname(event.target.value);
@@ -64,21 +87,22 @@ export default function GuestbookForm() {
     event.preventDefault();
     if (nickname.length > 0 && post.length > 0) {
       try {
-        await addUser(nickname);
-        const userId = await getUserId(nickname);
-        if (!userId) {
-          console.log("käyttäjää ei löytynyt");
+        let currentUserId = userId;
+        if (!currentUserId) {
+          const existingUserId = await getUserId(nickname);
+          if (existingUserId) {
+            currentUserId = existingUserId;
+          } else {
+            currentUserId = await addUser(nickname);
+          }
+          setUserId(currentUserId);
         }
-        await addMessage();
-        console.log("käyttäjä:", nickname);
-        console.log(
-          "viesti;",
-          userId,
-          post,
-          new Date().toISOString().slice(0, 19).replace("T", " ")
-        );
+        await addMessage(currentUserId, post);
         setNickname("");
         setPost("");
+        if (props.refreshMessages) {
+          props.refreshMessages();
+        }
       } catch (error) {
         console.error(error);
       }

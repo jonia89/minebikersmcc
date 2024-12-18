@@ -6,22 +6,23 @@ export default function Guestbook() {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    const getPosts = async () => {
-      try {
-        const response = await fetch("http://localhost:8080/vieraskirja");
-        const posts = await response.json();
-        setMessages(posts);
-      } catch (error) {
-        console.error(error);
-      }
-    };
     getPosts();
   }, []);
 
+  const getPosts = async () => {
+    try {
+      const response = await fetch("http://localhost:8080/vieraskirja");
+      const posts = await response.json();
+      setMessages(posts);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="guestbook">
-      <GuestbookForm />
-      <GuestbookList messages={messages} />
+      <GuestbookForm refreshPosts={() => getPosts()}/>
+      <GuestbookList messages={messages} setMessages={setMessages}/>
     </div>
   );
 }
