@@ -1,37 +1,37 @@
 [
     {
         "country": "Finland",
-        "visitors": 6269,
+        "visitors": 6459,
         "flag": "Finland.svg"
     },
     {
         "country": "United States",
-        "visitors": 3879,
+        "visitors": 4174,
         "flag": "United States.svg"
     },
     {
         "country": "China",
-        "visitors": 131,
+        "visitors": 132,
         "flag": "China.svg"
     },
     {
         "country": "United Kingdom",
-        "visitors": 279,
+        "visitors": 296,
         "flag": "United Kingdom.svg"
     },
     {
         "country": "France",
-        "visitors": 355,
+        "visitors": 509,
         "flag": "France.svg"
     },
     {
         "country": "Canada",
-        "visitors": 46,
+        "visitors": 54,
         "flag": "Canada.svg"
     },
     {
         "country": "Germany",
-        "visitors": 1426,
+        "visitors": 1446,
         "flag": "Germany.svg"
     },
     {
@@ -41,7 +41,7 @@
     },
     {
         "country": "Netherlands",
-        "visitors": 3081,
+        "visitors": 3095,
         "flag": "Netherlands.svg"
     },
     {
@@ -56,12 +56,12 @@
     },
     {
         "country": "Russian Federation",
-        "visitors": 58,
+        "visitors": 67,
         "flag": "Russian Federation.svg"
     },
     {
         "country": "India",
-        "visitors": 41,
+        "visitors": 46,
         "flag": "India.svg"
     },
     {
@@ -91,7 +91,7 @@
     },
     {
         "country": "Singapore",
-        "visitors": 92,
+        "visitors": 339,
         "flag": "Singapore.svg"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
         "country": "Bulgaria",
-        "visitors": 228,
+        "visitors": 256,
         "flag": "Bulgaria.svg"
     },
     {
@@ -131,7 +131,7 @@
     },
     {
         "country": "Iceland",
-        "visitors": 2,
+        "visitors": 34,
         "flag": "Iceland.svg"
     },
     {
@@ -146,7 +146,7 @@
     },
     {
         "country": "Austria",
-        "visitors": 1,
+        "visitors": 2,
         "flag": "Austria.svg"
     },
     {
@@ -206,7 +206,7 @@
     },
     {
         "country": "Indonesia",
-        "visitors": 17,
+        "visitors": 29,
         "flag": "Indonesia.svg"
     },
     {
@@ -233,5 +233,10 @@
         "country": "Mauritius",
         "visitors": 1,
         "flag": "Mauritius.svg"
+    },
+    {
+        "country": "Switzerland",
+        "visitors": 5,
+        "flag": "Switzerland.svg"
     }
 ]
