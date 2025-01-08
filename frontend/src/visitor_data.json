@@ -1,12 +1,12 @@
 [
     {
         "country": "Finland",
-        "visitors": 6459,
+        "visitors": 6558,
         "flag": "Finland.svg"
     },
     {
         "country": "United States",
-        "visitors": 4174,
+        "visitors": 4259,
         "flag": "United States.svg"
     },
     {
@@ -16,12 +16,12 @@
     },
     {
         "country": "United Kingdom",
-        "visitors": 296,
+        "visitors": 298,
         "flag": "United Kingdom.svg"
     },
     {
         "country": "France",
-        "visitors": 509,
+        "visitors": 517,
         "flag": "France.svg"
     },
     {
@@ -31,7 +31,7 @@
     },
     {
         "country": "Germany",
-        "visitors": 1446,
+        "visitors": 1457,
         "flag": "Germany.svg"
     },
     {
@@ -56,7 +56,7 @@
     },
     {
         "country": "Russian Federation",
-        "visitors": 67,
+        "visitors": 68,
         "flag": "Russian Federation.svg"
     },
     {
@@ -91,7 +91,7 @@
     },
     {
         "country": "Singapore",
-        "visitors": 339,
+        "visitors": 522,
         "flag": "Singapore.svg"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
         "country": "Bulgaria",
-        "visitors": 256,
+        "visitors": 446,
         "flag": "Bulgaria.svg"
     },
     {
@@ -151,12 +151,12 @@
     },
     {
         "country": "Poland",
-        "visitors": 99,
+        "visitors": 109,
         "flag": "Poland.svg"
     },
     {
         "country": "Turkey",
-        "visitors": 4,
+        "visitors": 5,
         "flag": "Turkey.svg"
     },
     {
@@ -176,7 +176,7 @@
     },
     {
         "country": "Luxembourg",
-        "visitors": 4,
+        "visitors": 20,
         "flag": "Luxembourg.svg"
     },
     {
@@ -206,7 +206,7 @@
     },
     {
         "country": "Indonesia",
-        "visitors": 29,
+        "visitors": 45,
         "flag": "Indonesia.svg"
     },
     {
@@ -236,7 +236,7 @@
     },
     {
         "country": "Switzerland",
-        "visitors": 5,
+        "visitors": 21,
         "flag": "Switzerland.svg"
     }
 ]

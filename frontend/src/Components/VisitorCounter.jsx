@@ -24,7 +24,6 @@ export default function Visitors() {
       setAllVisitors(false);
       setVisitorButtonText("Näytä kaikki");
     }
-    console.log(allVisitors);
     return visitorButtonText;
   };
 
