@@ -3,7 +3,6 @@ import "./Guestbook.css";
 
 export default function GuestbookForm(props) {
   const [nickname, setNickname] = useState("");
-  const [userId, setUserId] = useState(null);
   const [post, setPost] = useState("");
 
   //Funktiot
@@ -70,7 +69,21 @@ export default function GuestbookForm(props) {
     } catch (error) {
       console.error(error);
     }
+  };
 
+  const getUserName = async (userId) => {
+    try {
+      const response = await fetch(`http://localhost:8080/vieraskirja/${userId}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+    } catch (error) {
+      console.log(error)
+    }
   };
   
 
@@ -87,7 +100,7 @@ export default function GuestbookForm(props) {
     event.preventDefault();
     if (nickname.length > 0 && post.length > 0) {
       try {
-        let currentUserId = userId;
+        let currentUserId = props.userId;
         if (!currentUserId) {
           const existingUserId = await getUserId(nickname);
           if (existingUserId) {
@@ -95,7 +108,7 @@ export default function GuestbookForm(props) {
           } else {
             currentUserId = await addUser(nickname);
           }
-          setUserId(currentUserId);
+          props.setUserId(currentUserId);
         }
         await addMessage(currentUserId, post);
         setNickname("");
@@ -116,6 +129,7 @@ export default function GuestbookForm(props) {
       <div>
         <h1>Vieraskirja</h1>
       </div>
+      
       <div className="nimimerkki">
         <input
           type="text"

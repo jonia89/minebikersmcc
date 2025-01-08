@@ -42,13 +42,14 @@ export default function GuestbookList(props) {
         </div>
       ) : (
         props.messages.map((message) => (
-          <div key={message.id}>
+          <div className="viesti" key={message.id}>
             <div>
               {" "}
               <h2> {message.nimi}</h2>
             </div>
             <div>
               <h3>{message.viesti}</h3>{" "}
+              
               <button onClick={() => handleDelete(message.id)}>Poista</button>
               <p style={{ color: "gray" }}>Lähetetty: {message.aika}</p>
             </div>

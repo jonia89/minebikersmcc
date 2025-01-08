@@ -4,6 +4,7 @@ import GuestbookList from "../Components/Guestbook/GuestbookList";
 
 export default function Guestbook() {
   const [messages, setMessages] = useState([]);
+  const [userId, setUserId] = useState(null);
 
   useEffect(() => {
     getPosts();
@@ -21,7 +22,7 @@ export default function Guestbook() {
 
   return (
     <div className="guestbook">
-      <GuestbookForm refreshPosts={() => getPosts()}/>
+      <GuestbookForm refreshPosts={() => getPosts()} userId={userId} setUserId={setUserId} />
       <GuestbookList messages={messages} setMessages={setMessages}/>
     </div>
   );
