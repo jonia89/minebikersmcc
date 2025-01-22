@@ -1,6 +1,9 @@
+import { useState } from "react";
 import "./Guestbook.css";
 
 export default function GuestbookList(props) {
+  // const [writeComment, setWriteComment] = useState(false);
+
   const deletePost = async (id) => {
     try {
       const response = await fetch(
@@ -34,6 +37,10 @@ export default function GuestbookList(props) {
     }
   };
 
+  const handleUpdate = async (postId) => {
+    
+  };
+
   return (
     <div>
       {props.messages.length === 0 ? (
@@ -48,10 +55,24 @@ export default function GuestbookList(props) {
               <h2> {message.nimi}</h2>
             </div>
             <div>
-              <h3>{message.viesti}</h3>{" "}
-              
-              <button onClick={() => handleDelete(message.id)}>Poista</button>
+              <h3>{message.viesti}</h3>
+              {+message.nimi_id === +props.userId ? (
+                <div>
+                  <button onClick={() => handleDelete(message.id)}>
+                    Poista
+                  </button>
+                  <button onClick={() => handleUpdate(message.id)}>
+                    Muokkaa
+                  </button>
+                </div>
+              ) : (
+                ""
+              )}
               <p style={{ color: "gray" }}>Lähetetty: {message.aika}</p>
+            </div>
+            <div>
+              <button>Kommentoi</button>
+              <button>Kommentit</button>
             </div>
           </div>
         ))
