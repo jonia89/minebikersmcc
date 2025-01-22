@@ -21,7 +21,7 @@ export default function Home() {
             <FacebookEmbed
               className="facebook-bg"
               url={facebookPosts[0]}
-              width={350}
+              width={335}
             />
           </ErrorBoundary>
         </div>
