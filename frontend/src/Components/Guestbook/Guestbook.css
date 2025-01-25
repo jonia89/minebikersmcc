@@ -1,23 +1,28 @@
 .guestbook {
     backdrop-filter: blur(7px);
+
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding-top: 3%;
-    padding-bottom: 7%;
-
+    padding-top: 4%;
+    padding-bottom: 1%;
+    margin-left: 7%;
+    margin-right: 7%;
+    
   }
   
   .nimimerkki {
     background-color: black;
     padding-bottom: 1%;
     padding-top: 1%;
+    
   }
   .tekstikenttä {
     margin-left: 30%;
     margin-right: 30%;
     margin-bottom: 1%;
     padding-bottom: 1%;
+    
   }
   .lähetänappi {
     color: blue;
@@ -28,5 +33,7 @@
     color: blue;
   }
   .viesti {
+    margin-top: 1%;
     background-color: black;
+    border: solid silver 1px;
   }

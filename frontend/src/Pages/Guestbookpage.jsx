@@ -49,9 +49,15 @@ export default function Guestbook() {
         saveUserName={saveUserName}
       />
       <GuestbookList
+        nickname={nickname}
+        setNickname={setNickname}
         messages={messages}
         setMessages={setMessages}
         userId={userId}
+        setUserId={setUserId}
+        refreshPosts={() => getPosts()}
+        saveUserId={saveUserId}
+        saveUserName={saveUserName}
       />
     </div>
   );

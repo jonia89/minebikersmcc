@@ -1,10 +1,16 @@
 import { useState } from "react";
 import axios from "axios";
 import "./Guestbook.css";
+import { addUser } from "./addUser";
+import { addMessage } from "./addMessage";
+import { getUserId } from "./getUserId";
+import { deleteUser } from "./deleteUser";
 
 export default function GuestbookForm(props) {
   const [post, setPost] = useState("");
   const [userIpAddress, setUserIpAddress] = useState("");
+  const [tempName, setTempName] = useState(props.nickname);
+  const [modifyUser, setModifyUser] = useState(false);
 
   const getIpAddress = async () => {
     try {
@@ -14,149 +20,6 @@ export default function GuestbookForm(props) {
       console.error(error);
     }
   };
-
-  //Funktiot
-  const addUser = async (nickname, ipAddress) => {
-    try {
-      const response = await fetch("http://localhost:8080/vieraskirja/user", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          nimi: nickname,
-          ip_osoite: ipAddress,
-          ihminen: true,
-        }),
-      });
-      if (!response.ok) {
-        throw new Error("Failed to create user");
-      }
-      const data = await response.json();
-      return data.nimi_id;
-    } catch (error) {
-      console.error(error);
-    }
-  };
-  //
-  const addMessage = async (userId, message) => {
-    try {
-      await fetch("http://localhost:8080/vieraskirja/post", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          nimi_id: userId,
-          viesti: message,
-          aika: new Date().toISOString().slice(0, 19).replace("T", " "),
-        }),
-      });
-    } catch (error) {
-      console.error(error);
-    }
-  };
-  //
-  const getUserId = async (nickname) => {
-    try {
-      const response = await fetch(
-        `http://localhost:8080/vieraskirja/${nickname}`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      if (!response.ok) {
-        throw new Error("Failed to fetch user ID");
-      }
-      const user = await response.json();
-      if (!user) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return user.nimi_id;
-    } catch (error) {
-      console.error(error);
-      return null;
-    }
-  };
-
-  const getUserName = async (userId) => {
-    try {
-      const response = await fetch(
-        `http://localhost:8080/vieraskirja/${userId}`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      if (!response.ok) {
-        throw new Error("Failed to fetch user ID");
-      }
-      const user = await response.json();
-      if (!user) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return user.nimi;
-    } catch (error) {
-      console.log(error);
-      return null;
-    }
-  };
-
-  const deleteUser = async (userId) => {
-    try {
-      const response = await fetch(
-        `http://localhost:8080/vieraskirja/user/${userId}`,
-        {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      if (!response.ok) {
-        throw new Error("Failed to delete user");
-      }
-      const result = await response.json();
-      console.log(result.message);
-      return true;
-    } catch (error) {
-      console.error(error);
-      return false;
-    }
-  };
-
-  const updateUser = async (userId, nickname) => {
-    try {
-      const response = await fetch(
-        `http://localhost:8080/vieraskirja/user/${userId}`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            nimi: nickname,
-          }),
-        }
-      );
-      if (!response.ok) {
-        throw new Error("Failed to update user");
-      }
-      const result = await response.json();
-      console.log(result.message);
-      return true;
-    } catch (error) {
-      console.error(error);
-      return false;
-    }
-  };
-
-  //////////////////////////////////////////
 
   const handleDeleteUser = () => {
     const confirmation = window.confirm("Haluatko varmasti poistaa käyttäjän?");
@@ -170,23 +33,51 @@ export default function GuestbookForm(props) {
     }
   };
 
-  const handleUpdateUser = () => {
-    const newNickname = prompt("Anna uusi nimimerkki:");
-    if (newNickname) {
-      const confirmation = window.confirm(
-        "Haluatko varmasti muuttaa käyttäjänimettä?"
-      );
-      if (confirmation) {
-        updateUser(props.userId, newNickname);
-        props.setNickname(newNickname);
-        localStorage.setItem("minebikers_nickname", newNickname);
-        props.refreshPosts();
+  const handleUpdateUser = async (event) => {
+    event.preventDefault();
+    setModifyUser(true);
+  };
+
+  const handleSaveUpdatedUser = async (event) => {
+    event.preventDefault();
+    if (tempName.trim().length < 1) {
+      alert("Liian lyhyt nimimerkki");
+      return;
+    }
+    try {
+      const userExists = await getUserId(tempName);
+      if (userExists) {
+        alert("Nimimerkki on jo käytössä");
+        return;
       }
+
+      const response = await fetch(
+        `http://localhost:8080/vieraskirja/user/${props.userId}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ nimi: tempName }),
+        }
+      );
+      if (response.ok) {
+        const updatedUser = await response.json();
+        props.setNickname(updatedUser.nimi);
+        localStorage.setItem("minebikers_nickname", updatedUser.nimi);
+        setModifyUser(false);
+        props.refreshPosts();
+      } else {
+        alert("Käyttäjänimen päivitys epäonnistui!");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Käyttäjänimen päivitys epäonnistui!");
     }
   };
 
   const handleNameChange = (event) => {
-    props.setNickname(event.target.value);
+    setTempName(event.target.value);
   };
 
   const handleMessageChange = (event) => {
@@ -238,13 +129,25 @@ export default function GuestbookForm(props) {
   };
 
   return (
-    <form className="guestbook">
-      <div>
-        <h1>Vieraskirja</h1>
-      </div>
+    <form className="guestbook" style={{ backgroundColor: "black" }}>
       {props.userId && props.nickname ? (
         <div>
-          <h2>{props.nickname}</h2>
+          {modifyUser ? (
+            <div>
+              <input
+                type="text"
+                defaultValue={props.nickname}
+                onChange={handleNameChange}
+              />
+              <button onClick={handleSaveUpdatedUser}>Tallenna</button>
+              <button type="button" onClick={() => setModifyUser(false)}>
+                Peruuta
+              </button>
+            </div>
+          ) : (
+            <h1>{props.nickname}</h1>
+          )}
+
           <div>
             <button onClick={handleDeleteUser}>Poista käyttäjä</button>
             <button onClick={handleUpdateUser}>Muokkaa käyttäjänimeä</button>
@@ -267,7 +170,7 @@ export default function GuestbookForm(props) {
         placeholder="kirjoita viesti"
         onChange={handleMessageChange}
         rows={10}
-      ></textarea>
+      />
       <div>
         <button
           type="submit"
