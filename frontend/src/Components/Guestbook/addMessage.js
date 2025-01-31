@@ -1,6 +1,8 @@
-export const addMessage = async (userId, message) => {
-    try {
-      await fetch("http://localhost:8080/vieraskirja/post", {
+export const addMessage = async (userId, message, linkitysId = null) => {
+  try {
+    await fetch(
+      "https://vnfmu6bxo9.execute-api.eu-north-1.amazonaws.com/prod/vieraskirja/post",
+      {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -8,10 +10,11 @@ export const addMessage = async (userId, message) => {
         body: JSON.stringify({
           nimi_id: userId,
           viesti: message,
-          aika: new Date().toISOString().slice(0, 19).replace("T", " "),
+          linkitys_id: linkitysId
         }),
-      });
-    } catch (error) {
-      console.error(error);
-    }
-  };
+      }
+    );
+  } catch (error) {
+    console.error(error);
+  }
+};

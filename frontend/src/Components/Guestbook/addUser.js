@@ -1,6 +1,8 @@
 export const addUser = async (nickname, ipAddress) => {
-    try {
-      const response = await fetch("http://localhost:8080/vieraskirja/user", {
+  try {
+    const response = await fetch(
+      "https://vnfmu6bxo9.execute-api.eu-north-1.amazonaws.com/prod/vieraskirja/user",
+      {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -10,13 +12,14 @@ export const addUser = async (nickname, ipAddress) => {
           ip_osoite: ipAddress,
           ihminen: true,
         }),
-      });
-      if (!response.ok) {
-        throw new Error("Failed to create user");
       }
-      const data = await response.json();
-      return data.nimi_id;
-    } catch (error) {
-      console.error(error);
+    );
+    if (!response.ok) {
+      throw new Error("Käyttäjän luominen epäonnistui");
     }
-  };
+    const data = await response.json();
+    return data.nimi_id;
+  } catch (error) {
+    console.error(error);
+  }
+};

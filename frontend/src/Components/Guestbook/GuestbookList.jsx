@@ -5,6 +5,7 @@ import { deletePost } from "./deletePost";
 
 export default function GuestbookList(props) {
   const [writeComment, setWriteComment] = useState(false);
+  const [showComments, setShowComments] = useState(false);
   const [modifyPost, setModifyPost] = useState(false);
   const [tempMessage, setTempMessage] = useState("");
 
@@ -33,12 +34,11 @@ export default function GuestbookList(props) {
   const handleSaveModify = async (postId, updatedMessage) => {
     if (!updatedMessage || updatedMessage.trim() === "") {
       alert("Viesti ei voi olla tyhjä");
-      console.error("Updated message is empty!");
       return;
     }
     try {
       const response = await fetch(
-        `http://localhost:8080/vieraskirja/messages/${postId}`,
+        `https://vnfmu6bxo9.execute-api.eu-north-1.amazonaws.com/prod/vieraskirja/messages/${postId}`,
         {
           method: "PUT",
           headers: {
@@ -52,7 +52,7 @@ export default function GuestbookList(props) {
         [postId]: false,
       }));
       if (!response.ok) {
-        console.error("Error updating the message:", response.statusText);
+        console.error("Virhe viestin päivityksessä:", response.statusText);
         return;
       }
 
@@ -64,16 +64,25 @@ export default function GuestbookList(props) {
         )
       );
     } catch (error) {
-      console.error("Error updating the message:", error);
+      console.error("Virhe viestin päivityksessä:", error);
     }
   };
 
-
-  const handleCloseComment = async (postId) => {
+  const handleWriteComment = async (postId) => {
     setWriteComment((prevState) => ({
       ...prevState,
       [postId]: !prevState[postId],
     }));
+  };
+
+  const handleAddComment = (postId) => {
+    props.setIsComment(true);
+    props.setLinkedPostId(postId);
+  };
+
+  const handleCloseComment = () => {
+    props.setIsComment(false);
+    props.setLinkedPostId(null);
   };
 
   return (
@@ -91,9 +100,7 @@ export default function GuestbookList(props) {
             </div>
             <div>
               {!modifyPost[message.id] ? (
-                <h3>
-                  {message.id}: {message.viesti}
-                </h3>
+                <h3>{message.viesti}</h3>
               ) : (
                 <div>
                   <textarea
@@ -112,7 +119,7 @@ export default function GuestbookList(props) {
                 </div>
               )}
 
-              {+message.nimi_id === +props.userId && !modifyPost[message.id] ? (
+              {(+message.nimi_id === +props.userId || props.isMember) && !modifyPost[message.id] ? (
                 <div>
                   <button onClick={() => handleDelete(message.id)}>
                     Poista
@@ -124,15 +131,28 @@ export default function GuestbookList(props) {
               ) : (
                 ""
               )}
-              <p style={{ color: "gray" }}>Lähetetty: {message.aika}</p>
+              <p style={{ color: "gray" }}>
+                Lähetetty: {new Date(message.aika).toLocaleString()}
+              </p>
+              {message.muokattu !== null ? (
+                <p>Muokattu: {message.muokattu}</p>
+              ) : (
+                ""
+              )}
             </div>
 
-            {!writeComment[message.id] ? (
+            {/* {!writeComment[message.id] ? (
               <div>
-                <button onClick={() => handleCloseComment(message.id)}>
+                <button onClick={() => handleWriteComment(message.id)}>
                   Kommentoi
                 </button>
-                <button>Kommentit</button>
+                {message.kommentit > 0 ? (
+                  <button onClick={() => handleAddComment(message.id)}>
+                    Kommentit: {message.kommentit}
+                  </button>
+                ) : (
+                  ""
+                )}
               </div>
             ) : (
               <div>
@@ -145,11 +165,11 @@ export default function GuestbookList(props) {
                   saveUserId={props.saveUserId}
                   saveUserName={props.saveUserName}
                 />
-                <button onClick={() => handleCloseComment(message.id)}>
+                <button onClick={() => handleWriteComment(message.id)}>
                   Sulje
                 </button>
               </div>
-            )}
+            )} */}
           </div>
         ))
       )}

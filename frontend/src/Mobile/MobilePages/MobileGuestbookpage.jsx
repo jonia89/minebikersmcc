@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { getUserName } from "../Components/Guestbook/getUserName";
-import GuestbookForm from "../Components/Guestbook/GuestbookForm";
-import GuestbookList from "../Components/Guestbook/GuestbookList";
+import GuestbookForm from "../../Components/Guestbook/GuestbookForm";
+import GuestbookList from "../../Components/Guestbook/GuestbookList";
+import { getUserName } from "../../Components/Guestbook/getUserName";
+import "./MobileGuestbookpage.css"
 
-export default function Guestbook() {
+export default function MobileGuestbook() {
   const [messages, setMessages] = useState([]);
   const [userId, setUserId] = useState(null);
   const [nickname, setNickname] = useState("");
@@ -76,7 +77,7 @@ const checkStatus = async (userId) => {
 }
 
   return (
-    <div className="guestbook">
+    <div className="mobile-guestbook">
       <GuestbookForm
         refreshPosts={() => getPosts()}
         userId={userId}

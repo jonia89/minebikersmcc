@@ -11,7 +11,7 @@ export default function GuestbookForm(props) {
   const [userIpAddress, setUserIpAddress] = useState("");
   const [tempName, setTempName] = useState(props.nickname);
   const [modifyUser, setModifyUser] = useState(false);
-
+  
   const getIpAddress = async () => {
     try {
       const result = await axios.get("https://geolocation-db.com/json/");
@@ -52,7 +52,7 @@ export default function GuestbookForm(props) {
       }
 
       const response = await fetch(
-        `http://localhost:8080/vieraskirja/user/${props.userId}`,
+        `https://vnfmu6bxo9.execute-api.eu-north-1.amazonaws.com/prod/vieraskirja/user/${props.userId}`,
         {
           method: "PUT",
           headers: {
@@ -77,6 +77,7 @@ export default function GuestbookForm(props) {
   };
 
   const handleNameChange = (event) => {
+    props.setNickname(event.target.value);
     setTempName(event.target.value);
   };
 
@@ -101,7 +102,7 @@ export default function GuestbookForm(props) {
               props.setNickname(props.nickname);
               localStorage.setItem("minebikers_userId", userId);
               localStorage.setItem("minebikers_nickname", props.nickname);
-              await addMessage(userId, post);
+              await addMessage(userId, post, props.linkedPostId);
               setPost("");
               props.refreshPosts();
             }
@@ -116,7 +117,7 @@ export default function GuestbookForm(props) {
 
           // Käyttäjä ID jo lokaalisti
         } else {
-          await addMessage(props.userId, post);
+          await addMessage(props.userId, post, props.linkedPostId);
           setPost("");
           props.refreshPosts();
         }
@@ -157,7 +158,7 @@ export default function GuestbookForm(props) {
         <div className="nimimerkki">
           <input
             type="text"
-            value={props.nickname}
+            defaultValue={props.nickname}
             placeholder="nimimerkki"
             onChange={handleNameChange}
           />

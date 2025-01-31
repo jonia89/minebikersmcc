@@ -1,6 +1,5 @@
 .guestbook {
     backdrop-filter: blur(7px);
-
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -8,7 +7,6 @@
     padding-bottom: 1%;
     margin-left: 7%;
     margin-right: 7%;
-    
   }
   
   .nimimerkki {
@@ -18,8 +16,8 @@
     
   }
   .tekstikenttä {
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-bottom: 1%;
     padding-bottom: 1%;
     
