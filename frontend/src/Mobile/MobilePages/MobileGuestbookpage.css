@@ -1,0 +1,12 @@
+.mobile-guestbook {
+    backdrop-filter: blur(7px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 7%;
+    padding-bottom: 1%;
+    margin-top: 17%;
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+  
