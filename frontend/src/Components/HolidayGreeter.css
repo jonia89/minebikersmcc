@@ -38,3 +38,13 @@
     margin-left: 45%;
     margin-right: 35%;
   }
+  .holiday-greeting-messu {
+    backdrop-filter: blur(2px);
+    position: fixed;
+    display: flex;
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 10%;
+    margin-left: 45%;
+    margin-right: 35%;
+  }

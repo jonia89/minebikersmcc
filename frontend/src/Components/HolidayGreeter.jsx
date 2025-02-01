@@ -2,6 +2,7 @@ import MerryChristmas from "./Greetings/ChristmasGreeting";
 import HappyNewYear from "./Greetings/NewYearGreeting";
 import Independence from "./Greetings/IndependenceDay";
 import JogevaGreeting from "./Jogeva";
+import MessuGreeting from "./Greetings/MessuGreeting";
 import "./HolidayGreeter.css";
 
 export default function HolidayGreeter() {
@@ -34,6 +35,13 @@ export default function HolidayGreeter() {
       {date[1] === "Dec" && +date[2] === 6 ? (
         <div className="holiday-greeting-indepedence">
           <Independence />
+        </div>
+      ) : (
+        ""
+      )}
+      {date[1] === "Feb" && +date[2] === 1 ? (
+        <div className="holiday-greeting-messu">
+          <MessuGreeting />
         </div>
       ) : (
         ""
